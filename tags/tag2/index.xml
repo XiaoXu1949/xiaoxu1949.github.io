@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tag2 on </title>
+    <link>https:xiaoxu1949.github.io/tags/tag2/</link>
+    <description>Recent content in tag2 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Tue, 01 Dec 2020 16:59:33 +0800</lastBuildDate><atom:link href="https:xiaoxu1949.github.io/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test1</title>
+      <link>https:xiaoxu1949.github.io/posts/test1/</link>
+      <pubDate>Tue, 01 Dec 2020 16:59:33 +0800</pubDate>
+      
+      <guid>https:xiaoxu1949.github.io/posts/test1/</guid>
+      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
