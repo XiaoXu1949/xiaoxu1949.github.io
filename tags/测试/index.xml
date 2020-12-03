@@ -8,12 +8,13 @@
     <language>zh-Hans</language>
     <lastBuildDate>Tue, 01 Dec 2020 16:13:23 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test2</title>
-      <link>https://xiaoxu1949.github.io/posts/test2/</link>
+      <title>测试</title>
+      <link>https://xiaoxu1949.github.io/posts/test/</link>
       <pubDate>Tue, 01 Dec 2020 16:13:23 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/test2/</guid>
-      <description>&lt;h2 id=&#34;测试&#34;&gt;测试&lt;/h2&gt;</description>
+      <guid>https://xiaoxu1949.github.io/posts/test/</guid>
+      <description>&lt;h2 id=&#34;测试&#34;&gt;测试&lt;/h2&gt;
+&lt;p&gt;概要&lt;/p&gt;</description>
     </item>
     
   </channel>

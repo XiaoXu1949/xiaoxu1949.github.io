@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>markdown on </title>
-    <link>https://xiaoxu1949.github.io/tags/markdown/</link>
-    <description>Recent content in markdown on </description>
+    <title>入门 on </title>
+    <link>https://xiaoxu1949.github.io/categories/%E5%85%A5%E9%97%A8/</link>
+    <description>Recent content in 入门 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 01 Dec 2020 21:55:33 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Dec 2020 21:55:33 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/categories/%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown常用语法</title>
       <link>https://xiaoxu1949.github.io/posts/markdown/</link>
