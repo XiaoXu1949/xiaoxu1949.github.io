@@ -4,21 +4,81 @@
   
   <url>
     <loc>https://xiaoxu1949.github.io/</loc>
-    <lastmod>2020-12-03T19:29:28+08:00</lastmod>
+    <lastmod>2021-01-04T22:16:31+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://xiaoxu1949.github.io/categories/</loc>
-    <lastmod>2020-12-03T19:29:28+08:00</lastmod>
+    <loc>https://xiaoxu1949.github.io/tags/linux/</loc>
+    <lastmod>2021-01-04T22:16:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiaoxu1949.github.io/posts/day10/</loc>
+    <lastmod>2021-01-04T22:16:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://xiaoxu1949.github.io/posts/</loc>
-    <lastmod>2020-12-03T19:29:28+08:00</lastmod>
+    <lastmod>2021-01-04T22:16:31+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://xiaoxu1949.github.io/tags/</loc>
+    <lastmod>2021-01-04T22:16:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiaoxu1949.github.io/posts/day00/</loc>
+    <lastmod>2021-01-04T19:04:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiaoxu1949.github.io/posts/day09/</loc>
+    <lastmod>2021-01-04T19:03:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiaoxu1949.github.io/posts/day08/</loc>
+    <lastmod>2021-01-04T19:03:47+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiaoxu1949.github.io/posts/day07/</loc>
+    <lastmod>2021-01-04T19:03:42+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiaoxu1949.github.io/posts/day06/</loc>
+    <lastmod>2021-01-04T19:03:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiaoxu1949.github.io/posts/day05/</loc>
+    <lastmod>2021-01-04T19:03:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiaoxu1949.github.io/posts/day04/</loc>
+    <lastmod>2021-01-04T19:03:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiaoxu1949.github.io/posts/day03/</loc>
+    <lastmod>2021-01-04T19:03:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiaoxu1949.github.io/posts/day02/</loc>
+    <lastmod>2021-01-04T19:03:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiaoxu1949.github.io/posts/day01/</loc>
+    <lastmod>2021-01-04T14:48:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiaoxu1949.github.io/categories/</loc>
     <lastmod>2020-12-03T19:29:28+08:00</lastmod>
   </url>
   
@@ -28,17 +88,7 @@
   </url>
   
   <url>
-    <loc>https://xiaoxu1949.github.io/tags/%E6%84%9F%E6%82%9F/</loc>
-    <lastmod>2020-12-03T19:29:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiaoxu1949.github.io/categories/%E7%89%87%E5%88%BB%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2020-12-03T19:29:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiaoxu1949.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <loc>https://xiaoxu1949.github.io/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2020-12-03T19:29:28+08:00</lastmod>
   </url>
   
@@ -53,18 +103,8 @@
   </url>
   
   <url>
-    <loc>https://xiaoxu1949.github.io/categories/%E5%85%A5%E9%97%A8/</loc>
+    <loc>https://xiaoxu1949.github.io/categories/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2020-12-01T21:55:33+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiaoxu1949.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2020-12-01T16:13:23+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiaoxu1949.github.io/posts/test/</loc>
-    <lastmod>2020-12-01T16:13:23+08:00</lastmod>
   </url>
   
 </urlset>
