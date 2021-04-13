@@ -2,161 +2,152 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on </title>
-    <link>https://xiaoxu1949.github.io/posts/</link>
+    <link>https:xiaoxu1949.github.io/posts/</link>
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 13 Apr 2021 16:40:37 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo博客和git使用</title>
-      <link>https://xiaoxu1949.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E5%92%8Cgit%E4%BD%BF%E7%94%A8/</link>
-      <pubDate>Tue, 13 Apr 2021 16:40:37 +0800</pubDate>
-      
-      <guid>https://xiaoxu1949.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E5%92%8Cgit%E4%BD%BF%E7%94%A8/</guid>
-      <description>&lt;p&gt;不超过20词简介&lt;/p&gt;</description>
-    </item>
-    
+    <lastBuildDate>Tue, 13 Apr 2021 10:34:38 +0800</lastBuildDate><atom:link href="https:xiaoxu1949.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pytracking项目问题</title>
-      <link>https://xiaoxu1949.github.io/posts/pytracking%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/</link>
+      <link>https:xiaoxu1949.github.io/posts/pytracking%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 13 Apr 2021 10:34:38 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/pytracking%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/pytracking%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/</guid>
       <description>&lt;p&gt;pytracking项目遇到的一些问题&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Hugo写和推送blog过程</title>
-      <link>https://xiaoxu1949.github.io/posts/hugo%E5%86%99%E5%92%8C%E6%8E%A8%E9%80%81blog%E8%BF%87%E7%A8%8B/</link>
+      <title>hugo新增文档及git推送服务器</title>
+      <link>https:xiaoxu1949.github.io/posts/hugo%E6%96%B0%E5%A2%9E%E6%96%87%E6%A1%A3%E5%8F%8Agit%E6%8E%A8%E9%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Tue, 13 Apr 2021 09:42:34 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/hugo%E5%86%99%E5%92%8C%E6%8E%A8%E9%80%81blog%E8%BF%87%E7%A8%8B/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/hugo%E6%96%B0%E5%A2%9E%E6%96%87%E6%A1%A3%E5%8F%8Agit%E6%8E%A8%E9%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description>&lt;p&gt;hugo创建文档、git推送远程服务器(github)&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Win&#43;E快捷失灵</title>
-      <link>https://xiaoxu1949.github.io/posts/win&#43;e%E5%BF%AB%E6%8D%B7%E5%A4%B1%E7%81%B5/</link>
+      <link>https:xiaoxu1949.github.io/posts/win&#43;e%E5%BF%AB%E6%8D%B7%E5%A4%B1%E7%81%B5/</link>
       <pubDate>Tue, 13 Apr 2021 09:39:40 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/win&#43;e%E5%BF%AB%E6%8D%B7%E5%A4%B1%E7%81%B5/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/win&#43;e%E5%BF%AB%E6%8D%B7%E5%A4%B1%E7%81%B5/</guid>
       <description>&lt;p&gt;用yjgjrj时导致win+E失效&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-Day10</title>
-      <link>https://xiaoxu1949.github.io/posts/day10/</link>
+      <link>https:xiaoxu1949.github.io/posts/day10/</link>
       <pubDate>Mon, 04 Jan 2021 22:16:31 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/day10/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/day10/</guid>
       <description>&lt;p&gt;rpm,yum&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux- Day00</title>
-      <link>https://xiaoxu1949.github.io/posts/day00/</link>
+      <link>https:xiaoxu1949.github.io/posts/day00/</link>
       <pubDate>Mon, 04 Jan 2021 19:04:01 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/day00/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/day00/</guid>
       <description>&lt;p&gt;图片坑、韩顺平&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-Day09</title>
-      <link>https://xiaoxu1949.github.io/posts/day09/</link>
+      <link>https:xiaoxu1949.github.io/posts/day09/</link>
       <pubDate>Mon, 04 Jan 2021 19:03:53 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/day09/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/day09/</guid>
       <description>&lt;p&gt;进程管理、pstree,top&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-Day08</title>
-      <link>https://xiaoxu1949.github.io/posts/day08/</link>
+      <link>https:xiaoxu1949.github.io/posts/day08/</link>
       <pubDate>Mon, 04 Jan 2021 19:03:47 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/day08/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/day08/</guid>
       <description>&lt;p&gt;hosts,网络&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-Day07</title>
-      <link>https://xiaoxu1949.github.io/posts/day07/</link>
+      <link>https:xiaoxu1949.github.io/posts/day07/</link>
       <pubDate>Mon, 04 Jan 2021 19:03:42 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/day07/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/day07/</guid>
       <description>&lt;p&gt;磁盘分区，lsblk，fdisk&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-Day06</title>
-      <link>https://xiaoxu1949.github.io/posts/day06/</link>
+      <link>https:xiaoxu1949.github.io/posts/day06/</link>
       <pubDate>Mon, 04 Jan 2021 19:03:37 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/day06/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/day06/</guid>
       <description>&lt;p&gt;crond、atd&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-Day05</title>
-      <link>https://xiaoxu1949.github.io/posts/day05/</link>
+      <link>https:xiaoxu1949.github.io/posts/day05/</link>
       <pubDate>Mon, 04 Jan 2021 19:03:30 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/day05/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/day05/</guid>
       <description>&lt;p&gt;各种权限管理&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-Day04</title>
-      <link>https://xiaoxu1949.github.io/posts/day04/</link>
+      <link>https:xiaoxu1949.github.io/posts/day04/</link>
       <pubDate>Mon, 04 Jan 2021 19:03:24 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/day04/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/day04/</guid>
       <description>&lt;p&gt;常用指令&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-Day03</title>
-      <link>https://xiaoxu1949.github.io/posts/day03/</link>
+      <link>https:xiaoxu1949.github.io/posts/day03/</link>
       <pubDate>Mon, 04 Jan 2021 19:03:18 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/day03/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/day03/</guid>
       <description>&lt;p&gt;用户、组&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-Day02</title>
-      <link>https://xiaoxu1949.github.io/posts/day02/</link>
+      <link>https:xiaoxu1949.github.io/posts/day02/</link>
       <pubDate>Mon, 04 Jan 2021 19:03:09 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/day02/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/day02/</guid>
       <description>&lt;p&gt;远程、vim、sync&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>linux-Day01</title>
-      <link>https://xiaoxu1949.github.io/posts/day01/</link>
+      <link>https:xiaoxu1949.github.io/posts/day01/</link>
       <pubDate>Mon, 04 Jan 2021 14:48:45 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/day01/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/day01/</guid>
       <description>&lt;p&gt;虚拟机、安装、目录&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>京东电脑五年保修</title>
-      <link>https://xiaoxu1949.github.io/posts/%E4%BA%AC%E4%B8%9C%E7%94%B5%E8%84%91%E4%BA%94%E5%B9%B4%E4%BF%9D%E4%BF%AE/</link>
+      <link>https:xiaoxu1949.github.io/posts/%E4%BA%AC%E4%B8%9C%E7%94%B5%E8%84%91%E4%BA%94%E5%B9%B4%E4%BF%9D%E4%BF%AE/</link>
       <pubDate>Thu, 03 Dec 2020 19:29:28 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/%E4%BA%AC%E4%B8%9C%E7%94%B5%E8%84%91%E4%BA%94%E5%B9%B4%E4%BF%9D%E4%BF%AE/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/%E4%BA%AC%E4%B8%9C%E7%94%B5%E8%84%91%E4%BA%94%E5%B9%B4%E4%BF%9D%E4%BF%AE/</guid>
       <description>&lt;p&gt;京东上遇到的售后小事&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Markdown常用语法</title>
-      <link>https://xiaoxu1949.github.io/posts/markdown/</link>
+      <link>https:xiaoxu1949.github.io/posts/markdown/</link>
       <pubDate>Tue, 01 Dec 2020 21:55:33 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/markdown/</guid>
+      <guid>https:xiaoxu1949.github.io/posts/markdown/</guid>
       <description>&lt;p&gt;初始马克党。一些简单的语法，也待日后精进。&lt;/p&gt;</description>
     </item>
     
