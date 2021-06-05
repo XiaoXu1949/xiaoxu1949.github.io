@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on </title>
-    <link>https:xiaoxu1949.github.io/tags/git/</link>
+    <link>https://xiaoxu1949.github.io/tags/git/</link>
     <description>Recent content in git on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 13 Apr 2021 09:42:34 +0800</lastBuildDate><atom:link href="https:xiaoxu1949.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Apr 2021 09:42:34 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hugo新增文档及git推送服务器</title>
-      <link>https:xiaoxu1949.github.io/posts/hugo%E6%96%B0%E5%A2%9E%E6%96%87%E6%A1%A3%E5%8F%8Agit%E6%8E%A8%E9%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <link>https://xiaoxu1949.github.io/posts/hugo%E6%96%B0%E5%A2%9E%E6%96%87%E6%A1%A3%E5%8F%8Agit%E6%8E%A8%E9%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Tue, 13 Apr 2021 09:42:34 +0800</pubDate>
       
-      <guid>https:xiaoxu1949.github.io/posts/hugo%E6%96%B0%E5%A2%9E%E6%96%87%E6%A1%A3%E5%8F%8Agit%E6%8E%A8%E9%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <guid>https://xiaoxu1949.github.io/posts/hugo%E6%96%B0%E5%A2%9E%E6%96%87%E6%A1%A3%E5%8F%8Agit%E6%8E%A8%E9%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description>&lt;p&gt;hugo创建文档、git推送远程服务器(github)&lt;/p&gt;</description>
     </item>
     

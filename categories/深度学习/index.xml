@@ -2,17 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>深度学习 on </title>
-    <link>https:xiaoxu1949.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
+    <link>https://xiaoxu1949.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
     <description>Recent content in 深度学习 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 13 Apr 2021 10:34:38 +0800</lastBuildDate><atom:link href="https:xiaoxu1949.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 05 Jun 2021 12:27:30 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Labelme使用问题</title>
+      <link>https://xiaoxu1949.github.io/posts/labelme%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 05 Jun 2021 12:27:30 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/labelme%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/</guid>
+      <description>&lt;p&gt;labelme使用过程中遇到的一点问题！&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Pytracking项目问题</title>
-      <link>https:xiaoxu1949.github.io/posts/pytracking%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/</link>
+      <link>https://xiaoxu1949.github.io/posts/pytracking%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/</link>
       <pubDate>Tue, 13 Apr 2021 10:34:38 +0800</pubDate>
       
-      <guid>https:xiaoxu1949.github.io/posts/pytracking%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/</guid>
+      <guid>https://xiaoxu1949.github.io/posts/pytracking%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/</guid>
       <description>&lt;p&gt;pytracking项目遇到的一些问题&lt;/p&gt;</description>
     </item>
     

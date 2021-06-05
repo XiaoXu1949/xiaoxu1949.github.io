@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on </title>
-    <link>https:xiaoxu1949.github.io/tags/</link>
+    <link>https://xiaoxu1949.github.io/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 13 Apr 2021 10:34:38 +0800</lastBuildDate><atom:link href="https:xiaoxu1949.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>pytracking</title>
-      <link>https:xiaoxu1949.github.io/tags/pytracking/</link>
-      <pubDate>Tue, 13 Apr 2021 10:34:38 +0800</pubDate>
-      
-      <guid>https:xiaoxu1949.github.io/tags/pytracking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https:xiaoxu1949.github.io/tags/git/</link>
-      <pubDate>Tue, 13 Apr 2021 09:42:34 +0800</pubDate>
-      
-      <guid>https:xiaoxu1949.github.io/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https:xiaoxu1949.github.io/tags/hugo/</link>
-      <pubDate>Tue, 13 Apr 2021 09:42:34 +0800</pubDate>
-      
-      <guid>https:xiaoxu1949.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sat, 05 Jun 2021 13:12:46 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bug</title>
-      <link>https:xiaoxu1949.github.io/tags/bug/</link>
-      <pubDate>Tue, 13 Apr 2021 09:39:40 +0800</pubDate>
+      <link>https://xiaoxu1949.github.io/tags/bug/</link>
+      <pubDate>Sat, 05 Jun 2021 13:12:46 +0800</pubDate>
       
-      <guid>https:xiaoxu1949.github.io/tags/bug/</guid>
+      <guid>https://xiaoxu1949.github.io/tags/bug/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https:xiaoxu1949.github.io/tags/linux/</link>
-      <pubDate>Mon, 04 Jan 2021 22:16:31 +0800</pubDate>
+      <link>https://xiaoxu1949.github.io/tags/linux/</link>
+      <pubDate>Sat, 05 Jun 2021 11:10:44 +0800</pubDate>
       
-      <guid>https:xiaoxu1949.github.io/tags/linux/</guid>
+      <guid>https://xiaoxu1949.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pytracking</title>
+      <link>https://xiaoxu1949.github.io/tags/pytracking/</link>
+      <pubDate>Tue, 13 Apr 2021 10:34:38 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/tags/pytracking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://xiaoxu1949.github.io/tags/git/</link>
+      <pubDate>Tue, 13 Apr 2021 09:42:34 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://xiaoxu1949.github.io/tags/hugo/</link>
+      <pubDate>Tue, 13 Apr 2021 09:42:34 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>https:xiaoxu1949.github.io/tags/markdown/</link>
+      <link>https://xiaoxu1949.github.io/tags/markdown/</link>
       <pubDate>Tue, 01 Dec 2020 21:55:33 +0800</pubDate>
       
-      <guid>https:xiaoxu1949.github.io/tags/markdown/</guid>
+      <guid>https://xiaoxu1949.github.io/tags/markdown/</guid>
       <description></description>
     </item>
     
