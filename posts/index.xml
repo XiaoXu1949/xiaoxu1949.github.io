@@ -6,7 +6,61 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sat, 05 Jun 2021 14:01:59 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Jun 2021 22:15:58 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sublime_Text3快捷键大全</title>
+      <link>https://xiaoxu1949.github.io/posts/sublime_text3%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/</link>
+      <pubDate>Sun, 13 Jun 2021 22:15:58 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/sublime_text3%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/</guid>
+      <description>&lt;p&gt;Sublime Text3快捷键大全&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pycham快捷键</title>
+      <link>https://xiaoxu1949.github.io/posts/pycham%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Sun, 13 Jun 2021 22:05:29 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/pycham%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>&lt;p&gt;pycham常用快捷键&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>02_java笔记</title>
+      <link>https://xiaoxu1949.github.io/posts/02_java%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 13 Jun 2021 21:56:14 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/02_java%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;java语法基础&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>01_java笔记</title>
+      <link>https://xiaoxu1949.github.io/posts/01_java%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sun, 13 Jun 2021 21:56:05 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/01_java%E7%AC%94%E8%AE%B0/</guid>
+      <description>&lt;p&gt;java语法基础&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>四级、入党和后悔</title>
+      <link>https://xiaoxu1949.github.io/posts/%E5%9B%9B%E7%BA%A7%E5%85%A5%E5%85%9A%E5%92%8C%E5%90%8E%E6%82%94/</link>
+      <pubDate>Sun, 13 Jun 2021 21:49:04 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/%E5%9B%9B%E7%BA%A7%E5%85%A5%E5%85%9A%E5%92%8C%E5%90%8E%E6%82%94/</guid>
+      <description>&lt;p&gt;若干年后，后悔四六级和入党否？！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>考四级与意外</title>
+      <link>https://xiaoxu1949.github.io/posts/%E8%80%83%E5%9B%9B%E7%BA%A7%E4%B8%8E%E6%84%8F%E5%A4%96/</link>
+      <pubDate>Sun, 13 Jun 2021 21:31:20 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/%E8%80%83%E5%9B%9B%E7%BA%A7%E4%B8%8E%E6%84%8F%E5%A4%96/</guid>
+      <description>&lt;p&gt;谋事在人，成事在天&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>实验室买桌子</title>
       <link>https://xiaoxu1949.github.io/posts/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E4%B9%B0%E6%A1%8C%E5%AD%90/</link>
@@ -17,12 +71,12 @@
     </item>
     
     <item>
-      <title>图片的批量明名方法</title>
-      <link>https://xiaoxu1949.github.io/posts/%E5%9B%BE%E7%89%87%E7%9A%84%E6%89%B9%E9%87%8F%E6%98%8E%E5%90%8D%E6%96%B9%E6%B3%95/</link>
+      <title>图片的批量命名方法</title>
+      <link>https://xiaoxu1949.github.io/posts/%E5%9B%BE%E7%89%87%E7%9A%84%E6%89%B9%E9%87%8F%E5%91%BD%E5%90%8D%E6%96%B9%E6%B3%95/</link>
       <pubDate>Sat, 05 Jun 2021 13:51:22 +0800</pubDate>
       
-      <guid>https://xiaoxu1949.github.io/posts/%E5%9B%BE%E7%89%87%E7%9A%84%E6%89%B9%E9%87%8F%E6%98%8E%E5%90%8D%E6%96%B9%E6%B3%95/</guid>
-      <description>&lt;p&gt;使用脚本对图片批量明名&lt;/p&gt;</description>
+      <guid>https://xiaoxu1949.github.io/posts/%E5%9B%BE%E7%89%87%E7%9A%84%E6%89%B9%E9%87%8F%E5%91%BD%E5%90%8D%E6%96%B9%E6%B3%95/</guid>
+      <description>&lt;p&gt;使用脚本对图片批量命名&lt;/p&gt;</description>
     </item>
     
     <item>
