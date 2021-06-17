@@ -151,9 +151,9 @@
 <h2 id="网上参考贴">网上参考贴</h2>
 <p><a href="https://www.bilibili.com/read/cv8583767">https://www.bilibili.com/read/cv8583767</a></p>
 <h2 id="报错信息">报错信息</h2>
-<blockquote>
-<p>使用命令：labelme_json_to_dataset 生成数据时报错</p>
-</blockquote>
+<ul>
+<li>使用命令：labelme_json_to_dataset 生成数据时报错</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">(</span>LabelMe<span style="color:#f92672">)</span> PS C<span style="color:#f92672">:</span><span style="color:#960050;background-color:#1e0010">\</span>Users<span style="color:#960050;background-color:#1e0010">\</span>XZ<span style="color:#f92672">&gt;</span> labelme_json_to_dataset E<span style="color:#f92672">:</span><span style="color:#960050;background-color:#1e0010">\</span>桌面及默认文件夹地址<span style="color:#960050;background-color:#1e0010">\</span>桌面<span style="color:#960050;background-color:#1e0010">\</span>10000<span style="color:#f92672">.</span><span style="color:#a6e22e">json</span>
 <span style="color:#f92672">[</span>WARNING<span style="color:#f92672">]</span> json_to_dataset<span style="color:#f92672">:</span>main<span style="color:#f92672">:</span>15 <span style="color:#f92672">-</span> This script is aimed to demonstrate how to convert the JSON file to a single image dataset<span style="color:#f92672">.</span>
 <span style="color:#f92672">[</span>WARNING<span style="color:#f92672">]</span> json_to_dataset<span style="color:#f92672">:</span>main<span style="color:#f92672">:</span>19 <span style="color:#f92672">-</span> It won<span style="color:#960050;background-color:#1e0010">&#39;</span>t handle multiple JSON files to generate a real<span style="color:#f92672">-</span>use dataset<span style="color:#f92672">.</span>
@@ -169,11 +169,9 @@
     <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">loads</span><span style="color:#f92672">(</span>fp<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(),</span>
 UnicodeDecodeError: <span style="color:#960050;background-color:#1e0010">&#39;</span>gbk<span style="color:#960050;background-color:#1e0010">&#39;</span> codec can<span style="color:#960050;background-color:#1e0010">&#39;</span>t decode <span style="color:#66d9ef">byte</span> 0xa2 in position 2462<span style="color:#f92672">:</span> illegal multibyte sequence
 </code></pre></div><h2 id="解决方案">解决方案</h2>
-<blockquote>
 <p>这是由于1000.json文件中存在中文字符，labelme应用命令使用gbk编码不能识别中文字符。因此，将.json文件中的中文字符进行修改，便可以正常使用。</p>
 <p>gbk ：两字节编码</p>
 <p>UTF-8 ：三字节编码</p>
-</blockquote>
 <h2 id="labelme安装步骤">labelme安装步骤</h2>
 <ol>
 <li>conda创建虚拟环境     <a href="https://www.bilibili.com/video/BV1fZ4y1K7mH?p=3">https://www.bilibili.com/video/BV1fZ4y1K7mH?p=3</a></li>
@@ -407,6 +405,24 @@ UnicodeDecodeError: <span style="color:#960050;background-color:#1e0010">&#39;</
             
               <div class="item">
                 <div class="content">
+                  <a href="/posts/myjavacode02/" class="item">MyJavaCode02</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/myjavacode01/" class="item">MyJavaCode01</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/03_java%E5%9F%BA%E7%A1%80/" class="item">java03基础</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a href="/posts/sublime_text3%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/" class="item">Sublime_Text3快捷键大全</a>
                 </div>
               </div>
@@ -419,13 +435,13 @@ UnicodeDecodeError: <span style="color:#960050;background-color:#1e0010">&#39;</
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/02_java%E7%AC%94%E8%AE%B0/" class="item">02_java笔记</a>
+                  <a href="/posts/02_java%E7%AC%94%E8%AE%B0/" class="item">java02笔记</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/01_java%E7%AC%94%E8%AE%B0/" class="item">01_java笔记</a>
+                  <a href="/posts/01_java%E7%AC%94%E8%AE%B0/" class="item">java01笔记</a>
                 </div>
               </div>
             

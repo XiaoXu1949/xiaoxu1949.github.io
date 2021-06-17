@@ -148,21 +148,19 @@
       </header>
 
       <article class="main"><p>pytracking项目遇到的一些问题</p>
-<blockquote>
-<p>这个项目首先跟随的是B站up主&quot;隔壁班的小宁宁&quot;</p>
-</blockquote>
+<ul>
+<li>这个项目首先跟随的是B站up主&quot;隔壁班的小宁宁&quot;</li>
+</ul>
 <p><a href="https://www.bilibili.com/video/BV1WK4y1C7JG?p=26&amp;t=516">从零开始的单目标跟踪算法世界</a></p>
 <hr>
-<blockquote>
-<p>在跟随up主操作过程中遇到一些问题，特记录如下。</p>
-</blockquote>
+<ul>
+<li>在跟随up主操作过程中遇到一些问题，特记录如下。</li>
+</ul>
 <h2 id="1-安装nvidia驱动">1. 安装NVIDIA驱动</h2>
 <p>首先查看linux系统适应那些版本的nvidia驱动，最新的驱动不一定适合较老的NVIDIA驱动。</p>
-<blockquote>
-<ol>
-<li>1使用命令 ubuntu-drivers devices 可以查看Ubuntu的适合驱动版本型号。查询结果如下：</li>
-</ol>
-</blockquote>
+<ul>
+<li>1.1 使用命令 ubuntu-drivers devices 可以查看Ubuntu的适合驱动版本型号。查询结果如下：</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">root@ubuntu:/home/user# ubuntu-drivers devices
 <span style="color:#f92672">==</span> /sys/devices/pci0000:00/0000:00:02.0/0000:02:00.0 <span style="color:#f92672">==</span>
 modalias : pci:v000010DEd00001E04sv00007377sd00000000bc03sc00i00
@@ -173,19 +171,20 @@ driver   : nvidia-430 - third-party free recommended
 driver   : nvidia-415 - third-party free
 driver   : nvidia-418 - third-party free
 driver   : nvidia-410 - third-party free
-</code></pre></div><blockquote>
+</code></pre></div><ul>
+<li>
 <p>1.2 要卸载掉之前的nvidia驱动</p>
-</blockquote>
-<blockquote>
+</li>
+<li>
 <p>1.3 能够查看自己电脑的显卡类型</p>
-</blockquote>
-<blockquote>
+</li>
+<li>
 <p>1.4 能够在nvidia官网上查找显卡对应的驱动版本</p>
-</blockquote>
-<blockquote>
-<p>1.5 Ubuntu里显卡安装时，不能开启图形界面，否则报错。用命令 init 3 ，进入命令行模式，然后重启系统。</p>
-<p>报错信息中一般会有X-server这个词。</p>
-</blockquote>
+</li>
+<li>
+<p>1.5 Ubuntu里显卡安装时，不能开启图形界面，否则报错。用命令 init 3 ，进入命令行模式，然后重启系统。报错信息中一般会有X-server这个词。</p>
+</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">ERROR: An NVIDIA kernel module <span style="color:#e6db74">&#39;nvidia-drm&#39;</span> appears to already be loaded in  
          your kernel.  This may be because it is in use <span style="color:#f92672">(</span><span style="color:#66d9ef">for</span> example, by an X  
          server, a CUDA program, or the NVIDIA Persistence Daemon<span style="color:#f92672">)</span>, but this   
@@ -202,29 +201,29 @@ driver   : nvidia-410 - third-party free
   
   init <span style="color:#ae81ff">3</span> <span style="color:#75715e">#（字符界面）</span>
   init <span style="color:#ae81ff">5</span> <span style="color:#75715e">#（图形界面）</span>
-</code></pre></div><blockquote>
-<p>1.6 安装gcc编译器的错误提示</p>
-</blockquote>
+</code></pre></div><ul>
+<li>1.6 安装gcc编译器的错误提示</li>
+</ul>
 <p><a href="https://blog.csdn.net/liuchang__/article/details/78485498">网上参考帖</a></p>
-<blockquote>
-<p>1.7 安装make的错误提示</p>
-</blockquote>
+<ul>
+<li>1.7 安装make的错误提示</li>
+</ul>
 <p><a href="https://blog.csdn.net/asyk6266/article/details/101812233">网上参考帖</a></p>
-<blockquote>
-<p>1.8 “Nouveau kernel driver”错误提示，如下：</p>
-</blockquote>
+<ul>
+<li>1.8 “Nouveau kernel driver”错误提示，如下：</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ERROR: The Nouveau kernel driver is currently in use by your system. This driver is incompatible with the NVIDIA driver, and must be disabled before proceeding. Please consult the NVIDIA driver README and your Linux distribution’s documentation <span style="color:#66d9ef">for</span> details on how to correctly disable the Nouveau kernel driver.
 </code></pre></div><p><a href="https://blog.csdn.net/sdnuwjw/article/details/110290280">网上参考帖</a></p>
-<blockquote>
-<p>1.9 &quot; Building kernel modules&quot; ,无法创建内核，ubuntu系统和nvidia驱动不适配</p>
-</blockquote>
+<ul>
+<li>1.9 &quot; Building kernel modules&quot; ,无法创建内核，ubuntu系统和nvidia驱动不适配</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ERROR : An error occurred <span style="color:#66d9ef">while</span> performing the step : <span style="color:#e6db74">&#34; Building kernel modules&#34;</span>.
 </code></pre></div><p><a href="https://blog.csdn.net/mr_muli/article/details/88523742">网上参考帖</a></p>
 <hr>
 <h2 id="2安装cuda">2.安装CUDA</h2>
-<blockquote>
-<p>2.1 旧版CUDA的卸载</p>
-</blockquote>
+<ul>
+<li>2.1 旧版CUDA的卸载</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#方法一：</span>
 sudo apt-get remove nvidia-cuda-toolkit
 <span style="color:#75715e">#方法二：删除cuda toolkit及依赖</span>
@@ -235,55 +234,51 @@ sudo apt-get purge --auto-remove nvidia-cuda-toolkit
 <span style="color:#75715e">#方法四：将会完整删除</span>
 cd /usr/local/cuda-？.0/bin
 sudo sudo ./uninstall_cuda_?.0.pl
-</code></pre></div><blockquote>
-<p>2.2 CUDA适配版本查询</p>
-</blockquote>
+</code></pre></div><ul>
+<li>2.2 CUDA适配版本查询</li>
+</ul>
 <p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/CUDA%E9%80%82%E9%85%8D%E7%89%88%E6%9C%AC%E6%9F%A5%E8%AF%A2.png" alt=""></p>
-<blockquote>
-<p>2.3  nvcc添加环境变量</p>
-</blockquote>
+<ul>
+<li>2.3  nvcc添加环境变量</li>
+</ul>
 <p><a href="https://zhuanlan.zhihu.com/p/124292857">参考1（推荐）</a></p>
 <p><a href="https://blog.csdn.net/weixin_42106049/article/details/85065489">参考2</a></p>
 <p><a href="https://blog.csdn.net/w5688414/article/details/103302319">参考3</a></p>
 <hr>
 <h2 id="3-其它">3. 其它</h2>
-<blockquote>
-<p>3.1 1.11 conda添加环境变量</p>
-</blockquote>
+<ul>
+<li>3.1  conda添加环境变量</li>
+</ul>
 <p><a href="https://blog.csdn.net/caomin1hao/article/details/78341568">网上参考帖1</a></p>
 <p><a href="https://blog.csdn.net/liuxiaodong400/article/details/81089904">网上参考帖2</a></p>
-<blockquote>
-<p>3.2 安装命令中指定镜像源的命令</p>
-</blockquote>
+<ul>
+<li>3.2 安装命令中指定镜像源的命令</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">conda install pytorch torchvision cudatoolkit<span style="color:#f92672">=</span>10.0 -c pytorch
 <span style="color:#75715e"># 这里的 -c pytorch 就是指定的从官网下载</span>
-</code></pre></div><blockquote>
-<p>3.3 visdom模块安装错误</p>
-<p>​      配置虚拟环境时，安装这个包就可以了</p>
-</blockquote>
+</code></pre></div><ul>
+<li>3.3 visdom模块安装错误                                                                                                                                                                                   配置虚拟环境时，安装这个包就可以了</li>
+</ul>
 <p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/%E9%94%99%E8%AF%AFvisdom.png" alt=""></p>
-<blockquote>
-<p>3.4  PreciseRoIPooling 数据集安装错误（RuntimeError: Error building extension &lsquo;_prroi_pooling&rsquo;）</p>
-<p>​       我是通过Xftp软件上传的Pooling，可能是数据不完整，导致错误</p>
-<p>​       使用up主提供的git clone方法得以解决</p>
-</blockquote>
+<ul>
+<li>3.4  PreciseRoIPooling 数据集安装错误（RuntimeError: Error building extension &lsquo;_prroi_pooling&rsquo;）                                  我是通过Xftp软件上传的Pooling，可能是数据不完整，导致错误                                                                                                    使用up主提供的git clone方法得以解决</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/vacancy/PreciseRoIPooling.git <span style="color:#75715e">#在需要保存的文件夹下使用该命令</span>
-</code></pre></div><blockquote>
-<p>3.5 给sudo添加用户权限</p>
-<p>​       通过网上搜索，找到解决方案</p>
-</blockquote>
+</code></pre></div><ul>
+<li>3.5 给sudo添加用户权限                                                                                                                                                                                   通过网上搜索，找到解决方案</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">xxxis not in the sudoers file.  This incident will be reported. 
 <span style="color:#75715e"># 这里，xxx是用户名称，然后导致无法执行sudo命令</span>
-</code></pre></div><blockquote>
-<p>3.6  qt平台报错</p>
-</blockquote>
+</code></pre></div><ul>
+<li>3.6  qt平台报错</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">qt.qpa.xcb: could not connect to display localhost:10.0
   qt.qpa.plugin: Could not load the Qt platform plugin <span style="color:#e6db74">&#34;xcb&#34;</span> in <span style="color:#e6db74">&#34;/home/xiaoxu/miniconda3/envs/pytracking/lib/python3.7/site-packages/cv2/qt/plugins&#34;</span> even though it was found.
   This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
 </code></pre></div><p><a href="https://blog.csdn.net/Felaim/article/details/109384602">参考帖</a></p>
-<blockquote>
-<p>3.7  不能连接X server</p>
-</blockquote>
+<ul>
+<li>3.7  不能连接X server</li>
+</ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">: cannot connect to X server localhost:10.0
 </code></pre></div><p><a href="https://zhuanlan.zhihu.com/p/129913348">参考帖</a></p></article>
     </section>
@@ -511,6 +506,24 @@ sudo sudo ./uninstall_cuda_?.0.pl
             
               <div class="item">
                 <div class="content">
+                  <a href="/posts/myjavacode02/" class="item">MyJavaCode02</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/myjavacode01/" class="item">MyJavaCode01</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/03_java%E5%9F%BA%E7%A1%80/" class="item">java03基础</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a href="/posts/sublime_text3%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/" class="item">Sublime_Text3快捷键大全</a>
                 </div>
               </div>
@@ -523,13 +536,13 @@ sudo sudo ./uninstall_cuda_?.0.pl
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/02_java%E7%AC%94%E8%AE%B0/" class="item">02_java笔记</a>
+                  <a href="/posts/02_java%E7%AC%94%E8%AE%B0/" class="item">java02笔记</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/01_java%E7%AC%94%E8%AE%B0/" class="item">01_java笔记</a>
+                  <a href="/posts/01_java%E7%AC%94%E8%AE%B0/" class="item">java01笔记</a>
                 </div>
               </div>
             

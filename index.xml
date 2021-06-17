@@ -6,7 +6,34 @@
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sun, 13 Jun 2021 22:15:58 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Jun 2021 23:27:43 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MyJavaCode02</title>
+      <link>https://xiaoxu1949.github.io/posts/myjavacode02/</link>
+      <pubDate>Thu, 17 Jun 2021 23:27:43 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/myjavacode02/</guid>
+      <description>&lt;p&gt;数组、冒泡排序、二位数组&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MyJavaCode01</title>
+      <link>https://xiaoxu1949.github.io/posts/myjavacode01/</link>
+      <pubDate>Thu, 17 Jun 2021 23:09:22 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/myjavacode01/</guid>
+      <description>&lt;p&gt;数据类型、控制语句&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>java03基础</title>
+      <link>https://xiaoxu1949.github.io/posts/03_java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Thu, 17 Jun 2021 23:03:59 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/03_java%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;控制结构、数组&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Sublime_Text3快捷键大全</title>
       <link>https://xiaoxu1949.github.io/posts/sublime_text3%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/</link>
@@ -26,7 +53,7 @@
     </item>
     
     <item>
-      <title>02_java笔记</title>
+      <title>java02笔记</title>
       <link>https://xiaoxu1949.github.io/posts/02_java%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sun, 13 Jun 2021 21:56:14 +0800</pubDate>
       
@@ -35,7 +62,7 @@
     </item>
     
     <item>
-      <title>01_java笔记</title>
+      <title>java01笔记</title>
       <link>https://xiaoxu1949.github.io/posts/01_java%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sun, 13 Jun 2021 21:56:05 +0800</pubDate>
       

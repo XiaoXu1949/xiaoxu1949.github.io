@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MyJavaCode01 | </title>
+
+    
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+
+<meta name="author" content="小徐" />
+<meta name="description" content="数据类型、控制语句
+" />
+
+
+
+<meta name="generator" content="Hugo 0.79.0" />
+
+<link rel="canonical" href="https://xiaoxu1949.github.io/posts/myjavacode01/" />
+
+
+<meta property="og:title" content="MyJavaCode01" />
+<meta property="og:description" content="数据类型、控制语句" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiaoxu1949.github.io/posts/myjavacode01/" />
+<meta property="article:published_time" content="2021-06-17T23:09:22+08:00" />
+<meta property="article:modified_time" content="2021-06-17T23:09:22+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MyJavaCode01"/>
+<meta name="twitter:description" content="数据类型、控制语句"/>
+
+
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/icomoon.css" />
+<link rel="stylesheet" href="/css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+<style>
+  a:hover {
+    text-decoration: underline; 
+  }
+
+  
+  a {
+    color: seagreen !important;
+  }
+  
+
+  
+  .inverted a,
+  .inverted a:hover {
+     color: darkseagreen !important;
+  }
+  
+
+  
+  body.default {
+    
+    background-color: black;
+    
+
+    
+    background-image: url(/img/background.png);
+    
+  }
+  
+
+  
+</style>
+
+    
+
+
+  
+    <link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/gruvbox-light.min.css" />
+  
+
+
+
+
+
+  </head>
+
+  <body class="default">
+    
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/xiaoxu1949.github.io'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
+  
+</nav>
+
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    
+    <section class="ui top attached segment cover">
+      <div class="cover-img" style="background-image: url(/myimg/MyJavaCode01.jpg);"></div>
+    </section>
+    
+    <section class="ui attached segment">
+      <header>
+        <h1 class="ui large header">
+          MyJavaCode01
+          <div class="sub header">
+            @
+            
+              
+                <a href="https://xiaoxu1949.github.io/" target="_blank">小徐</a>
+              
+            
+
+            | 
+                星期四，六月 17 日，2021 年
+              
+
+            | 8 分钟阅读
+
+            | 更新于
+              
+                星期四，六月 17 日，2021 年
+              
+          </div>
+        </h1>
+      </header>
+
+      <article class="main"><p>数据类型、控制语句</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ChangChar</span><span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">){</span>
+
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;A/tB/tC/t/r/nD/tE/tF/t&#34;</span><span style="color:#f92672">);</span><span style="color:#75715e">//错误，斜杠反了！
+</span><span style="color:#75715e"></span>         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;A\tB\tC\t\nD\tE\tF\t&#34;</span><span style="color:#f92672">);</span><span style="color:#960050;background-color:#1e0010">\</span>t 在<span style="color:#e6db74">&#34;&#34;</span>里可以识别
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ForExercise01</span><span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">){</span>
+
+		<span style="color:#75715e">//需求： 打印 1~100 之间所有是 9 的倍数的整数，统计个数 及 总和
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">//思路：化繁为简
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">//     1.打印 1~100 的整数
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">//     2.9的倍数
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">//     3.统计个数
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">//     4.求总和
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">//     
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">//     先死后活
+</span><span style="color:#75715e"></span>		<span style="color:#75715e">// 
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>  
+		<span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> 
+		<span style="color:#66d9ef">int</span> start <span style="color:#f92672">=</span> 100<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">int</span> end <span style="color:#f92672">=</span> 1000<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">int</span> mul <span style="color:#f92672">=</span> 100<span style="color:#f92672">;</span>
+
+		<span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> start<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span> end<span style="color:#f92672">;</span> i<span style="color:#f92672">++){</span>
+
+			<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i <span style="color:#f92672">%</span> mul <span style="color:#f92672">==</span> 0<span style="color:#f92672">){</span>
+
+                count<span style="color:#f92672">++;</span>
+                sum <span style="color:#f92672">+=</span> i<span style="color:#f92672">;</span>
+				System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+			<span style="color:#f92672">}</span>
+			
+		<span style="color:#f92672">}</span>
+
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>start <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;~&#34;</span> <span style="color:#f92672">+</span> end <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;之间所有&#34;</span> <span style="color:#f92672">+</span> mul <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;的倍数的整数&#34;</span> <span style="color:#f92672">);</span>
+	    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;count=&#34;</span> <span style="color:#f92672">+</span> count <span style="color:#f92672">+</span><span style="color:#e6db74">&#34; sun=&#34;</span> <span style="color:#f92672">+</span> sum <span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.Scanner<span style="color:#f92672">;</span>
+
+<span style="color:#75715e">//需求：1) 统计 3 个班成绩情况，每个班有 5 名同学，求出各个班的平均分和所有班级的平均分[学生的成绩从键盘输入]。
+</span><span style="color:#75715e">//      2) 统计三个班及格人数，每个班有 5 名同学。
+</span><span style="color:#75715e">//化繁为简：1.
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">//先死后活：     
+</span><span style="color:#75715e">//      
+</span><span style="color:#75715e">// 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ForExercise02</span> <span style="color:#f92672">{</span>
+	
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">){</span>
+
+        Scanner myscanner <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner<span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">in</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">double</span> totalSum <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span><span style="color:#75715e">//所有班级总成绩
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> goodSum <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span><span style="color:#75715e">//所有班级及格人数
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> studentClass <span style="color:#f92672">=</span> 2<span style="color:#f92672">;</span><span style="color:#75715e">//班级数
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> studentNum <span style="color:#f92672">=</span> 3<span style="color:#f92672">;</span><span style="color:#75715e">//每个班级学生人数
+</span><span style="color:#75715e"></span>
+        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span>studentClass<span style="color:#f92672">;</span> i<span style="color:#f92672">++){</span>
+           
+            <span style="color:#66d9ef">double</span> sum <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span><span style="color:#75715e">//每个班级总分数
+</span><span style="color:#75715e"></span>        	<span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;=</span>studentNum<span style="color:#f92672">;</span> j<span style="color:#f92672">++){</span>
+
+        		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;请输入&#34;</span> <span style="color:#f92672">+</span> i <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;班&#34;</span> <span style="color:#f92672">+</span> j <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;名同学成绩&#34;</span><span style="color:#f92672">);</span>
+        		<span style="color:#66d9ef">double</span> score <span style="color:#f92672">=</span> myscanner<span style="color:#f92672">.</span><span style="color:#a6e22e">nextDouble</span><span style="color:#f92672">();</span>  <span style="color:#75715e">//输入的数据没有被存储，只是立刻被计算啦
+</span><span style="color:#75715e"></span>        		<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>score <span style="color:#f92672">&gt;=</span> 60<span style="color:#f92672">){</span>
+
+        			goodSum<span style="color:#f92672">++;</span>
+        		<span style="color:#f92672">}</span>
+        		sum <span style="color:#f92672">+=</span> score<span style="color:#f92672">;</span>
+        	<span style="color:#f92672">}</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;第&#34;</span> <span style="color:#f92672">+</span> i <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;班总分&#34;</span> <span style="color:#f92672">+</span> sum<span style="color:#f92672">);</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;第&#34;</span> <span style="color:#f92672">+</span> i <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;班平均分&#34;</span> <span style="color:#f92672">+</span> sum <span style="color:#f92672">/</span> studentNum<span style="color:#f92672">);</span>
+            totalSum <span style="color:#f92672">+=</span> sum<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;所有班级总分&#34;</span> <span style="color:#f92672">+</span> totalSum<span style="color:#f92672">);</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;所有班平均分&#34;</span> <span style="color:#f92672">+</span> totalSum <span style="color:#f92672">/</span> <span style="color:#f92672">(</span>studentClass <span style="color:#f92672">*</span> studentNum<span style="color:#f92672">));</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;所有班及格人数&#34;</span> <span style="color:#f92672">+</span> goodSum<span style="color:#f92672">);</span>
+        
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+
+<span style="color:#75715e">//需求：打印出九九乘法表
+</span><span style="color:#75715e">//分析：1.先输出i &lt;= 9；j &lt;= 9
+</span><span style="color:#75715e">//      2.再输出i &lt;= 9；j &lt;= i
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ForExercise03</span><span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">){</span>
+       <span style="color:#75715e">//i是行数
+</span><span style="color:#75715e"></span>       <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span> 9<span style="color:#f92672">;</span> i<span style="color:#f92672">++){</span>
+           <span style="color:#75715e">//j是列数，观察可知列
+</span><span style="color:#75715e"></span>       	   <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;=</span> i<span style="color:#f92672">;</span> j<span style="color:#f92672">++){</span>
+
+       	   	  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>i <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;*&#34;</span> <span style="color:#f92672">+</span> j <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;=&#34;</span> <span style="color:#f92672">+</span> i<span style="color:#f92672">*</span>j<span style="color:#f92672">);</span>
+              System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\t&#34;</span><span style="color:#f92672">);</span> 
+       	   <span style="color:#f92672">}</span>
+       	   System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">);</span> 
+       <span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+
+<span style="color:#75715e">/*需求：
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">		   *
+</span><span style="color:#75715e">		  * *
+</span><span style="color:#75715e">	     *   *
+</span><span style="color:#75715e">		*******
+</span><span style="color:#75715e">*/</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ForExercise04</span><span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">){</span>
+        
+        <span style="color:#66d9ef">int</span> row <span style="color:#f92672">=</span> 20<span style="color:#f92672">;</span><span style="color:#75715e">//行
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">//int column = 7;//列
+</span><span style="color:#75715e"></span>
+		<span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span> row<span style="color:#f92672">;</span> i<span style="color:#f92672">++){</span>
+
+            <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> k <span style="color:#f92672">&lt;=</span> <span style="color:#f92672">(</span>row <span style="color:#f92672">-</span> i<span style="color:#f92672">);</span> k<span style="color:#f92672">++){</span>
+
+            	System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+            <span style="color:#f92672">}</span>
+			<span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;=</span> <span style="color:#f92672">(</span>2 <span style="color:#f92672">*</span> i <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span> j<span style="color:#f92672">++){</span>
+                <span style="color:#75715e">//这里化繁为简【这里的繁指需求繁，也就是思路繁】，有条件过滤的思想，每次化简都会加上一些限制条件，
+</span><span style="color:#75715e"></span>                <span style="color:#75715e">//繁（代码简），简（代码繁）
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i <span style="color:#f92672">==</span> 1 <span style="color:#f92672">||</span> i <span style="color:#f92672">==</span> row <span style="color:#f92672">||</span> j <span style="color:#f92672">==</span> 1 <span style="color:#f92672">||</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">(</span>2 <span style="color:#f92672">*</span> i <span style="color:#f92672">-</span> 1<span style="color:#f92672">)){</span>
+
+                   System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;*&#34;</span><span style="color:#f92672">);</span>	
+                <span style="color:#f92672">}</span>
+				<span style="color:#66d9ef">else</span><span style="color:#f92672">{</span>
+
+					System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+				<span style="color:#f92672">}</span>
+			<span style="color:#f92672">}</span>
+			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+
+<span style="color:#75715e">/*需求：
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">		   *
+</span><span style="color:#75715e">		  * *
+</span><span style="color:#75715e">	     *   *
+</span><span style="color:#75715e">		*     *
+</span><span style="color:#75715e">	     *   *
+</span><span style="color:#75715e">		  * *
+</span><span style="color:#75715e">		   * 
+</span><span style="color:#75715e">*/</span>
+<span style="color:#75715e">// public class ForExercise0row{
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 	public static void main(String[] args){
+</span><span style="color:#75715e"></span>        
+<span style="color:#75715e">//         int row = 7;//行
+</span><span style="color:#75715e">//         //int column = 7;//列
+</span><span style="color:#75715e">//         //上三角
+</span><span style="color:#75715e">// 		for(int i = 1; i &lt;= (row / 2 + 1); i++){
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//             for(int k = 1; k &lt;= (row - i); k++){
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//             	System.out.print(&#34; &#34;);
+</span><span style="color:#75715e">//             }
+</span><span style="color:#75715e">// 			for(int j = 1; j &lt;= (2 * i - 1); j++){
+</span><span style="color:#75715e">//                 //这里化繁为简【这里的繁指需求繁，也就是思路繁】，有条件过滤的思想，每次化简都会加上一些限制条件，
+</span><span style="color:#75715e">//                 //繁（代码简），简（代码繁）
+</span><span style="color:#75715e">//                 if(j == 1 || j == (2 * i - 1)){
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//                    System.out.print(&#34;*&#34;);	
+</span><span style="color:#75715e">//                 }
+</span><span style="color:#75715e">// 				else{
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 					System.out.print(&#34; &#34;);
+</span><span style="color:#75715e">// 				}
+</span><span style="color:#75715e">// 			}
+</span><span style="color:#75715e">// 		System.out.print(&#34;\n&#34;);       
+</span><span style="color:#75715e">// 		}
+</span><span style="color:#75715e">// 		//下三角	
+</span><span style="color:#75715e">// 		for(int i = row; i &gt; (row / 2 + 1) &amp; i &lt;= row; i--){
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//             for(int k = 1; k &lt;= (i - 4); k++){
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//             	System.out.print(&#34; &#34;);
+</span><span style="color:#75715e">//             }
+</span><span style="color:#75715e">// 			for(int j = 1; j &lt;= (2 * i - 1); j++){
+</span><span style="color:#75715e">//                 //这里化繁为简【这里的繁指需求繁，也就是思路繁】，有条件过滤的思想，每次化简都会加上一些限制条件，
+</span><span style="color:#75715e">//                 //繁（代码简），简（代码繁）
+</span><span style="color:#75715e">//                 if(j == 1 || j == (2 * i - 1)){
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//                    System.out.print(&#34;*&#34;);	
+</span><span style="color:#75715e">//                 }
+</span><span style="color:#75715e">// 				else{
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 					System.out.print(&#34; &#34;);
+</span><span style="color:#75715e">// 				}
+</span><span style="color:#75715e">// 			}
+</span><span style="color:#75715e">// 		System.out.print(&#34;\n&#34;);	
+</span><span style="color:#75715e">// 	   }
+</span><span style="color:#75715e"></span>		
+<span style="color:#75715e">// 	}
+</span><span style="color:#75715e">// }
+</span><span style="color:#75715e">// 不对，应该理清思路，从头开始分析。
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">/*需求：
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">		   *
+</span><span style="color:#75715e">		  * *
+</span><span style="color:#75715e">	     *   *
+</span><span style="color:#75715e">		*     *
+</span><span style="color:#75715e">	     *   *
+</span><span style="color:#75715e">		  * *
+</span><span style="color:#75715e">		   * 
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#75715e">/*
+</span><span style="color:#75715e"> 化繁为简：1.	 *****  
+</span><span style="color:#75715e">				 ***** 
+</span><span style="color:#75715e">				 ***** 
+</span><span style="color:#75715e">                 *****
+</span><span style="color:#75715e">                 *****
+</span><span style="color:#75715e">                 
+</span><span style="color:#75715e">           2.    *      第1行1个*  --&gt;当行数&lt;=3时     第4行num个*  --&gt;当行数&gt;3时     if进行过滤
+</span><span style="color:#75715e">				 ***    第2行3个*                    第row行1个*
+</span><span style="color:#75715e">				 *****  第3行5个*   星数=2*行数-1               星数=5-2*(行数-3)
+</span><span style="color:#75715e">                 ***    
+</span><span style="color:#75715e">                 *
+</span><span style="color:#75715e">                 
+</span><span style="color:#75715e">           3.      *     当行数&lt;=3时  空格数=3-行数   for来添加空格
+</span><span style="color:#75715e">				  ***    当行数&gt;3时   空格数=行数-3
+</span><span style="color:#75715e">				 ***** 
+</span><span style="color:#75715e">                  ***
+</span><span style="color:#75715e">                   *
+</span><span style="color:#75715e">                   
+</span><span style="color:#75715e">           4.      *      使用if进行过滤
+</span><span style="color:#75715e">				  * * 
+</span><span style="color:#75715e">				 *   *
+</span><span style="color:#75715e">                  * *
+</span><span style="color:#75715e">                   *
+</span><span style="color:#75715e">  先死后活：菱形应该是奇数，行数和列数相同，每条边int num颗的菱形，行数为int row=2*num-1  
+</span><span style="color:#75715e">  注意：死改活的过程中，不要随便ctrl+h进行替换，最好手动修改替换            
+</span><span style="color:#75715e"> */</span>
+ 
+<span style="color:#75715e">//
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ForExercise05</span><span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">){</span>
+
+		<span style="color:#66d9ef">int</span> num <span style="color:#f92672">=</span> 50<span style="color:#f92672">;</span><span style="color:#75715e">//菱形每条边的*数
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> row <span style="color:#f92672">=</span> 2 <span style="color:#f92672">*</span> num <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span> row<span style="color:#f92672">;</span> i<span style="color:#f92672">++){</span><span style="color:#75715e">//行数
+</span><span style="color:#75715e"></span>
+           <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;=</span> num<span style="color:#f92672">){</span>
+
+                <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> k <span style="color:#f92672">&lt;=</span> num <span style="color:#f92672">-</span> i<span style="color:#f92672">;</span> k<span style="color:#f92672">++){</span>
+
+                	System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+	           	<span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;=</span> <span style="color:#f92672">(</span>2 <span style="color:#f92672">*</span> i <span style="color:#f92672">-</span> 1<span style="color:#f92672">);</span> j<span style="color:#f92672">++){</span><span style="color:#75715e">//列数
+</span><span style="color:#75715e"></span>	           
+	              <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>j <span style="color:#f92672">==</span> 1 <span style="color:#f92672">||</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">(</span>2 <span style="color:#f92672">*</span> i <span style="color:#f92672">-</span> 1<span style="color:#f92672">)){</span>  <span style="color:#75715e">//错误使用&amp;&amp;导致失败
+</span><span style="color:#75715e"></span>
+	                  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;*&#34;</span><span style="color:#f92672">);</span>
+	               <span style="color:#f92672">}</span>
+	              <span style="color:#66d9ef">else</span><span style="color:#f92672">{</span>
+
+	              	  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+	               <span style="color:#f92672">}</span>
+	           <span style="color:#f92672">}</span>
+	           System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">);</span>
+           <span style="color:#f92672">}</span>
+           <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i <span style="color:#f92672">&gt;</span> num <span style="color:#f92672">&amp;&amp;</span> i <span style="color:#f92672">&lt;=</span> row<span style="color:#f92672">){</span>
+
+                <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> k <span style="color:#f92672">&lt;=</span> i <span style="color:#f92672">-</span> num<span style="color:#f92672">;</span> k<span style="color:#f92672">++){</span>
+
+                	System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+	           	<span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;=</span> row <span style="color:#f92672">-</span> 2 <span style="color:#f92672">*</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> num<span style="color:#f92672">);</span> j<span style="color:#f92672">++){</span><span style="color:#75715e">//列数
+</span><span style="color:#75715e"></span>	           
+	              <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>j <span style="color:#f92672">==</span> 1 <span style="color:#f92672">||</span> j <span style="color:#f92672">==</span> row <span style="color:#f92672">-</span> 2 <span style="color:#f92672">*</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">-</span> num<span style="color:#f92672">)){</span>  <span style="color:#75715e">//错误使用&amp;&amp;导致失败
+</span><span style="color:#75715e"></span>
+	              	  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;*&#34;</span><span style="color:#f92672">);</span>
+	               <span style="color:#f92672">}</span>
+	              <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+
+	              	  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+	              <span style="color:#f92672">}</span>
+	           <span style="color:#f92672">}</span>
+	           System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">);</span>
+           <span style="color:#f92672">}</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+
+<span style="color:#75715e">//方法一：if-break
+</span><span style="color:#75715e">// public class HomeWork01{
+</span><span style="color:#75715e">// 	public static void main(String[] args){
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 	    double totalMoney = 100000;
+</span><span style="color:#75715e">// 		double balance = totalMoney;
+</span><span style="color:#75715e">// 		int count = 0;
+</span><span style="color:#75715e">// 		while(balance &gt; 50000){
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 			balance = balance * (1 - 0.05);
+</span><span style="color:#75715e">// 			count++;
+</span><span style="color:#75715e">// 		}
+</span><span style="color:#75715e">// 		while(balance &lt;= 50000){
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 			balance -= 1000;
+</span><span style="color:#75715e">// 			count++;
+</span><span style="color:#75715e">// 			if(balance &lt; 1000){
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 				break;
+</span><span style="color:#75715e">// 			}
+</span><span style="color:#75715e">// 		}
+</span><span style="color:#75715e">// 		System.out.println(&#34;可以通过的路口数为&#34; + count);	
+</span><span style="color:#75715e">// 	}
+</span><span style="color:#75715e">// }
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// 方法二：while break
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomeWork01</span><span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">){</span>
+
+	    <span style="color:#66d9ef">double</span> totalMoney <span style="color:#f92672">=</span> 100000<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">double</span> balance <span style="color:#f92672">=</span> totalMoney<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">while</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">){</span>
+
+			<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>balance <span style="color:#f92672">&gt;</span> 50000<span style="color:#f92672">){</span>
+
+				balance <span style="color:#f92672">=</span> balance <span style="color:#f92672">*</span> <span style="color:#f92672">(</span>1 <span style="color:#f92672">-</span> 0<span style="color:#f92672">.</span><span style="color:#a6e22e">05</span><span style="color:#f92672">);</span>
+				count<span style="color:#f92672">++;</span>
+			<span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>balance <span style="color:#f92672">&gt;</span> 1000 <span style="color:#f92672">&amp;&amp;</span> balance <span style="color:#f92672">&lt;=</span> 50000<span style="color:#f92672">){</span>
+
+            	balance <span style="color:#f92672">-=</span>1000<span style="color:#f92672">;</span>
+            	count<span style="color:#f92672">++;</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+
+            	<span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+		<span style="color:#f92672">}</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;可以通过的路口数为&#34;</span> <span style="color:#f92672">+</span> count<span style="color:#f92672">);</span>	
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.Scanner<span style="color:#f92672">;</span> <span style="color:#75715e">//学会使用输入语句
+</span><span style="color:#75715e"></span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomeWork02</span><span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">){</span>
+
+              Scanner myscanner <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner<span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">in</span><span style="color:#f92672">);</span>
+
+              <span style="color:#66d9ef">int</span> number <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+
+              System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;请输入一个整数：&#34;</span><span style="color:#f92672">);</span>
+              number <span style="color:#f92672">=</span> myscanner<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">();</span> <span style="color:#75715e">//学会查手册
+</span><span style="color:#75715e"></span>              <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>number <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">){</span>
+
+              	  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;这个数&#34;</span> <span style="color:#f92672">+</span> number <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;大于0&#34;</span><span style="color:#f92672">);</span>
+              <span style="color:#f92672">}</span>
+              <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>number <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">){</span>
+
+              	  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;这个数&#34;</span> <span style="color:#f92672">+</span> number <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;小于0&#34;</span><span style="color:#f92672">);</span>
+              <span style="color:#f92672">}</span>
+              <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+
+              	  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;这个数&#34;</span> <span style="color:#f92672">+</span> number <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;等于0&#34;</span><span style="color:#f92672">);</span>
+              <span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.util.Scanner<span style="color:#f92672">;</span>
+
+<span style="color:#75715e">//需求：判断一个年份是否为闰年
+</span><span style="color:#75715e">//分析：闰年是每隔4年出现一次，因此，能被4整除的是闰年。
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomeWork03</span><span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">){</span>
+ 
+		Scanner myscanner <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner<span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">in</span><span style="color:#f92672">);</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;请输入一个年份：&#34;</span><span style="color:#f92672">);</span>
+		<span style="color:#66d9ef">int</span> year <span style="color:#f92672">=</span> myscanner<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">();</span>
+		<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>year <span style="color:#f92672">%</span> 4 <span style="color:#f92672">==</span> 0<span style="color:#f92672">){</span>
+
+			System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;这一年&#34;</span> <span style="color:#f92672">+</span> year <span style="color:#f92672">+</span><span style="color:#e6db74">&#34;是闰年&#34;</span><span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+		<span style="color:#66d9ef">else</span><span style="color:#f92672">{</span>
+
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;这一年&#34;</span> <span style="color:#f92672">+</span> year <span style="color:#f92672">+</span><span style="color:#e6db74">&#34;不是闰年&#34;</span><span style="color:#f92672">);</span>
+		<span style="color:#f92672">}</span>
+
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+
+<span style="color:#75715e">//需求:判断一个整数是否是水仙花数，三位数，其各个位上数字立方和等于其本身(找到100~999中所有水仙数)
+</span><span style="color:#75715e">//例如153=1*1*1+5*5*5+3*3*3
+</span><span style="color:#75715e">//分析：百位=number/100；十位=（number-百位*100）/10；个位=number-百位*100-十位*10；
+</span><span style="color:#75715e">//结果：这样的数共有四个153，370，371，407
+</span><span style="color:#75715e">//还可以改进，比如这个立方的计算可以用函数
+</span><span style="color:#75715e"></span><span style="color:#75715e">/*
+</span><span style="color:#75715e">public class HomeWork04{
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">	public static void main(String[] args){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">        for(int i = 100; i &lt;1000; i++){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">            int hundred = i / 100;  
+</span><span style="color:#75715e">            int decade = (i - hundred * 100) / 10;  //还可以  i%100/10
+</span><span style="color:#75715e">            int unit = i - hundred * 100 - decade * 10;  //还可以  i%10  这就是算法的精髓！
+</span><span style="color:#75715e">        	if(i == hundred * hundred * hundred + decade * decade * decade + unit * unit * unit){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">               System.out.println(i);
+</span><span style="color:#75715e">        	}
+</span><span style="color:#75715e">        }
+</span><span style="color:#75715e">	}
+</span><span style="color:#75715e">}
+</span><span style="color:#75715e">*/</span>
+
+
+<span style="color:#75715e">//需求：输出1~100之间不能被5整除的数，每一行5个。
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e"></span><span style="color:#75715e">/*
+</span><span style="color:#75715e">public class HomeWork04{
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">	public static void main(String[] args){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">        int count = 0;
+</span><span style="color:#75715e">		for(int i = 0; i &lt;= 100; i++){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">			if(i % 5 != 0){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">				System.out.print(i + &#34;\t&#34;);
+</span><span style="color:#75715e">				count++;
+</span><span style="color:#75715e">			}
+</span><span style="color:#75715e">			if(count % 5 == 0){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">                System.out.print(&#34;\n&#34;);
+</span><span style="color:#75715e">			}
+</span><span style="color:#75715e">		}
+</span><span style="color:#75715e">	}
+</span><span style="color:#75715e">}
+</span><span style="color:#75715e">*/</span>
+
+
+<span style="color:#75715e">//需求：输出小写的a~z以及大写的Z~A
+</span><span style="color:#75715e">//分析：a--&gt;97 z--&gt;122（97 + 25）  26个英文字母
+</span><span style="color:#75715e">//     Z--&gt;90  A--&gt;65
+</span><span style="color:#75715e"></span><span style="color:#75715e">/*
+</span><span style="color:#75715e">//方法一：
+</span><span style="color:#75715e">public class HomeWork04{
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">	public static void main(String[] args){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">		// char a = 90;            //char是单引号，记成了双引号，这就是细节，这就是要动手的原因
+</span><span style="color:#75715e">		// System.out.print(a);    //犯错误的地方：char可以直接赋值数字，直接赋值字符，字符要用单引号括起来
+</span><span style="color:#75715e">		for(int i = 97; i &lt;= 122; i++){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">            char alp = (char) i;
+</span><span style="color:#75715e">			System.out.print(alp + &#34; &#34;);
+</span><span style="color:#75715e">		}
+</span><span style="color:#75715e">		System.out.print(&#34;\n&#34;);
+</span><span style="color:#75715e">		for(int i = 90; i &gt;= 65; i--){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">            char alp = (char) i;
+</span><span style="color:#75715e">			System.out.print(alp + &#34; &#34;);
+</span><span style="color:#75715e">		}
+</span><span style="color:#75715e">	}
+</span><span style="color:#75715e">}
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">//方法二：
+</span><span style="color:#75715e">public class HomeWork04{
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">	public static void main(String[] args){
+</span><span style="color:#75715e">    
+</span><span style="color:#75715e">		for(char alp = &#39;a&#39;; alp &lt;= &#39;z&#39;; alp++){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">			System.out.print(alp + &#34; &#34;);
+</span><span style="color:#75715e">		}
+</span><span style="color:#75715e">		System.out.print(&#34;\n&#34;);
+</span><span style="color:#75715e">		for(char alp = &#39;Z&#39;; alp &gt;= &#39;A&#39;; alp--){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">			System.out.print(alp + &#34; &#34;);
+</span><span style="color:#75715e">		}
+</span><span style="color:#75715e">	}
+</span><span style="color:#75715e">}
+</span><span style="color:#75715e">*/</span>
+
+
+
+
+<span style="color:#75715e">//需求：求出1-1/2+1/3-1/4...-1/100的和
+</span><span style="color:#75715e">//分析：pow（（-1），i-1）*（1 / i）
+</span><span style="color:#75715e">//结果：0.688172179310195
+</span><span style="color:#75715e"></span><span style="color:#75715e">/*
+</span><span style="color:#75715e">//方法一：
+</span><span style="color:#75715e">public class HomeWork04{
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">	public static void main(String[] args){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">		double sum = 0;
+</span><span style="color:#75715e">		for(int i = 1; i &lt;=100; i++){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">			sum += Math.pow(-1, i + 1) * (1.0 / i); 
+</span><span style="color:#75715e">			//错误：误使用int sum和1/i；应使用double型数据和1.0/i
+</span><span style="color:#75715e">		}
+</span><span style="color:#75715e">		System.out.print(sum);
+</span><span style="color:#75715e">	}
+</span><span style="color:#75715e">}
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#75715e">///*
+</span><span style="color:#75715e">//方法二：
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HomeWork04</span><span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">){</span>
+
+		<span style="color:#66d9ef">double</span> sum <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;=</span> 100<span style="color:#f92672">;</span> i<span style="color:#f92672">++){</span>
+	
+	       <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>i <span style="color:#f92672">%</span> 2 <span style="color:#f92672">==</span> 0<span style="color:#f92672">){</span>
+	
+	          sum <span style="color:#f92672">-=</span> 1<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span> <span style="color:#f92672">/</span> i<span style="color:#f92672">;</span>
+	       <span style="color:#f92672">}</span>
+	       <span style="color:#66d9ef">else</span><span style="color:#f92672">{</span>
+	
+	          sum <span style="color:#f92672">+=</span> 1<span style="color:#f92672">.</span><span style="color:#a6e22e">0</span> <span style="color:#f92672">/</span> i<span style="color:#f92672">;</span>
+	       <span style="color:#f92672">}</span>
+		<span style="color:#f92672">}</span>
+		System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span>sum<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//*/
+</span><span style="color:#75715e"></span>
+
+
+
+
+<span style="color:#75715e">//需求：求1+（1+2）+（1+2+3）+...+（1+2+3+...+100）的值
+</span><span style="color:#75715e">//第1个式子1个数+
+</span><span style="color:#75715e">//第2个式子2个数+
+</span><span style="color:#75715e">//第3个式子3个数+
+</span><span style="color:#75715e">//...+
+</span><span style="color:#75715e">//第n个式子n个数
+</span><span style="color:#75715e">//分析：（1）（1+2+3+...+100）+...+（1+2+3+...+100）100个  i &lt;=100  j &lt;=100
+</span><span style="color:#75715e">//      （2）1+（1+2）+（1+2+3）+...+（1+2+3+...+100） 100个 i &lt;=100  j &lt;=i
+</span><span style="color:#75715e">//结果：171700
+</span><span style="color:#75715e"></span><span style="color:#75715e">/*
+</span><span style="color:#75715e">public class HomeWork04{
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">	public static void main(String[] args){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">	//	int totalSum = 0;  没用
+</span><span style="color:#75715e">		int sum = 0;
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">		for(int i = 1; i &lt;=100; i++){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">			for(int j = 1; j &lt;=i; j++){
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">			   sum += j;
+</span><span style="color:#75715e">		    }
+</span><span style="color:#75715e">	//	    totalSum += sum;   没用
+</span><span style="color:#75715e">		}
+</span><span style="color:#75715e">		System.out.println(sum);
+</span><span style="color:#75715e">	}
+</span><span style="color:#75715e">}
+</span><span style="color:#75715e">*/</span>
+
+
+</code></pre></div></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
+      
+        
+          <a class="ui label" href="/tags/java" title="java">java</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>保存为图片
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore>
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'https:\/\/xiaoxu1949.github.io\/posts\/myjavacode01\/';  
+            this.page.identifier = '\/posts\/myjavacode01\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'xiaoxu' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+    
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="/img/avatar.jpg">
+      
+    </div>
+
+    
+    <div class="ui medium header">
+    
+      xiaoxu 的博客
+      <div class="sub header" style="margin-top: 0.5rem;">知行合一</div>
+    
+    </div>
+    
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/posts">
+        <i class="archive icon" title="归档"></i>
+      </a>
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="所有标签"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="所有分类"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/tags/bug" title="bug">bug</a>
+    
+      <a class="ui label" href="/tags/git" title="git">git</a>
+    
+      <a class="ui label" href="/tags/hugo" title="hugo">hugo</a>
+    
+      <a class="ui label" href="/tags/java" title="java">java</a>
+    
+      <a class="ui label" href="/tags/linux" title="linux">linux</a>
+    
+      <a class="ui label" href="/tags/markdown" title="markdown">markdown</a>
+    
+      <a class="ui label" href="/tags/other" title="other">other</a>
+    
+      <a class="ui label" href="/tags/pytracking" title="pytracking">pytracking</a>
+    
+      <a class="ui label" href="/tags/tools" title="tools">tools</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+      
+      
+      
+      
+
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0" class="item">深度学习</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/labelme%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/" class="item">Labelme使用问题</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/pytracking%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/" class="item">Pytracking项目问题</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/%E7%94%9F%E6%B4%BB" class="item">生活</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E5%9B%9B%E7%BA%A7%E5%85%A5%E5%85%9A%E5%92%8C%E5%90%8E%E6%82%94/" class="item">四级、入党和后悔</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E8%80%83%E5%9B%9B%E7%BA%A7%E4%B8%8E%E6%84%8F%E5%A4%96/" class="item">考四级与意外</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E4%B9%B0%E6%A1%8C%E5%AD%90/" class="item">实验室买桌子</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E5%9B%BE%E7%89%87%E7%9A%84%E6%89%B9%E9%87%8F%E5%91%BD%E5%90%8D%E6%96%B9%E6%B3%95/" class="item">图片的批量命名方法</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E7%81%AB%E7%8B%90%E8%B4%A6%E5%8F%B7%E4%B8%8D%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/" class="item">火狐账号不同步问题</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E6%88%91%E7%9A%84%E5%AE%B6%E6%88%91%E7%9A%84%E6%A0%B9/" class="item">我的家我的根</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E5%90%90%E6%A7%BD/" class="item">吐槽</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/hugo%E6%96%B0%E5%A2%9E%E6%96%87%E6%A1%A3%E5%8F%8Agit%E6%8E%A8%E9%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="item">hugo新增文档及git推送服务器</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/win&#43;e%E5%BF%AB%E6%8D%B7%E5%A4%B1%E7%81%B5/" class="item">Win&#43;E快捷失灵</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E4%BA%AC%E4%B8%9C%E7%94%B5%E8%84%91%E4%BA%94%E5%B9%B4%E4%BF%9D%E4%BF%AE/" class="item">京东电脑五年保修</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/%E7%BC%96%E7%A8%8B" class="item">编程</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/myjavacode02/" class="item">MyJavaCode02</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/myjavacode01/" class="item">MyJavaCode01</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/03_java%E5%9F%BA%E7%A1%80/" class="item">java03基础</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/sublime_text3%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/" class="item">Sublime_Text3快捷键大全</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/pycham%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="item">Pycham快捷键</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/02_java%E7%AC%94%E8%AE%B0/" class="item">java02笔记</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/01_java%E7%AC%94%E8%AE%B0/" class="item">java01笔记</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/nvidia%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98/" class="item">Nvidia驱动问题</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/linux%E9%80%9F%E6%9F%A5-%E7%A8%8B%E5%BA%8F%E7%BE%8A/" class="item">Linux速查-程序羊</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/markdown/" class="item">Markdown常用语法</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+
+      
+    </div>
+  </section>
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+  
+    <div class="item">
+      <a href="mailto:18811155642@163.com">
+        <i class=" mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/XiaoXu1949" target="_blank">
+        <i class=" github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 1949 - 2021 </p>
+    
+
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+
+    
+      <p>常含敬畏之心</p>
+    
+  </section>
+</article>
+
+  </div>
+</div>
+
+          </div>
+        </section>
+        <section class="back">
+          <div class="dream-max-width">
+            <div class="ui centered relaxed grid dream-grid dream-back">
+  
+  
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">2021.5.21向他汇报</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>这次汇报时，心情极度不好。</p>
+<p>这次汇报，自己没有什么成果、进展，又为小论文的事情着急。老师又一个劲的催着做一些自己很难做出来得东西，因此导致心情极度沮丧，晚上给老妈通了电话，心情才有所平复。</p>
+<blockquote>
+<p>当时写的日记：</p>
+<p>今天又和他汇报，没啥用，感觉他也是在完成任务。为什么呢？就是没有实质性的帮助，再加上他说的话，给的命令，完全就没啥帮助。我希望有张科备那种实打实的帮助，或者郭淼那种精神上的帮助都可以。然而，我再怎么严格要求自己，他都无感。或许他自身难保，自己的事情都处理不了呢！不管了！按照自己的进度来就好了。</p>
+<p>按照自己的进度来，事情要做，但是要按照我自己的节奏来，不管你说什么，除非有实质性的帮助，不然都按照我自己的方式来做。目标不会变了，就是这个追踪器加分割目标。数据集有了，最大的麻烦是啃下代码，代码怎么实现的，以及实现的原理。然后才是怎么修改，实验。实验是一小部分。按照实际情况，应该是先写，把该写的东西写好，在写的基础上，做实验，就是把写的东西弄好看，再给一点依据。</p>
+<p>做吧，按照自己的方法，按照自己的节奏来！</p>
+</blockquote>
+<p>总结：首先自己要努力，内源动力最总要。其次，对于别人的要求 量力而行，要结合自己的实际来做事，有自己的节奏最重要。最后，不管怎么样，都是要自己对自己负责滴，父母再厉害也只能帮你某些方面；父母再不厉害，也能在某些方面帮助你。言而总之，尽人事，知天命。每个人的能力都是有限的，尽力去做了，享受了过程，对于结果，不可控，秉承着顺其自然，船到桥头自然直就好。</p>
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">处女秀</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>一篇简短自我介绍</p>
+<p>初次搭建博客，使用的是hugo搭建的。整个流程中有哪些东西呢？Git、Hugo、powershell操作指令，当然还有远端部署。</p>
+<p>遇到的问题有：</p>
+<p>1.blog根目录下的几个文件夹是什么？是由hugo生成的。</p>
+<p>2.git、hugo这些我安装的东西都算啥？是平常用的运行程序，还是啥?。应该都是运行程序吧，因为都用的是.exe程序安装的，并且都配置了环境变量。只不过它们都没有图形界面，但是都可以在机器上使用它们的命令。这里的机器就是指人机交互窗口(命令提示符/cmd/power shell),这些终端是介于底层硬件和操作系统之间的。</p>
+<p>3.再就是主题，主题的那些文件夹是啥？如何看主题源码，更改配置，再进阶一点就是自己来做优化。</p>
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">About me</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>hi , my name is xuzhuang , this is myblog</p>
+<p>nice to meet you , happy with your watching .</p>
+        </div>
+      </article>
+    </section>
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">社交链接</h3>
+      </div>
+      <div class="ui bottom attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+  
+    <div class="item">
+      <a href="mailto:18811155642@163.com">
+        <i class="large mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/XiaoXu1949" target="_blank">
+        <i class="large github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+  window.backgroundDark =  null 
+  window.backgroundImageDark =  null 
+  window.darkNav =  true 
+  window.hasTwitterEmbed =  true 
+
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/jquery.overlayScrollbars.min.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/html2canvas.min.js"></script>
+<script src="/js/post.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
+     
+  
+
+  <script>
+  hljs.initHighlightingOnLoad()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    var lightTheme = "gruvbox-light"
+    var darkTheme = "gruvbox-dark"
+    var theme = isDark ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark ? '#333' : '')
+  }
+</script>
+
+
+
+
+
+    
+      <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="搜索" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/xiaoxu1949.github.io/index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="/js/search.js"></script>
+
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-98295641-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </body>
+</html>

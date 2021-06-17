@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>02_java笔记 | </title>
+    <title>java02笔记 | </title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -23,7 +23,7 @@
 <link rel="canonical" href="https://xiaoxu1949.github.io/posts/02_java%E7%AC%94%E8%AE%B0/" />
 
 
-<meta property="og:title" content="02_java笔记" />
+<meta property="og:title" content="java02笔记" />
 <meta property="og:description" content="java语法基础" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://xiaoxu1949.github.io/posts/02_java%E7%AC%94%E8%AE%B0/" />
@@ -33,7 +33,7 @@
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="02_java笔记"/>
+<meta name="twitter:title" content="java02笔记"/>
 <meta name="twitter:description" content="java语法基础"/>
 
 
@@ -124,7 +124,7 @@
     <section class="ui attached segment">
       <header>
         <h1 class="ui large header">
-          02_java笔记
+          java02笔记
           <div class="sub header">
             @
             
@@ -149,24 +149,54 @@
 
       <article class="main"><p>java语法基础</p>
 <p>2021.6.8</p>
-<ol>
-<li>变量名在编译时占空间；在运行时不占空间</li>
-<li>数据类型分为基本“数据类型”和“引用数据类型”</li>
-<li>java默认常量（整数）是int  ；  默认常量（小数）是double；常量声明可以后面加i，L等，如5l，5f等</li>
-<li>对运算结果是小数时的相等判断要小心，因为小数是个近似值</li>
-<li>在java中，char的本质是一个整数，在输出时，是unicode码对应的字符</li>
-<li>Unicode码兼容ASCII码</li>
-<li>（byte，short）和char之间不会相互自动转换</li>
-<li>byte、short，char  三者可以计算，但在计算时会首先转换为int类型。也就是只要参与运算就是int型</li>
-<li>表达式结果的类型自动提升为操作数中最大的类型</li>
-<li>（重点）当整数字面值（默认为int）没有超出byte、short、char的取值范围时，可以直接复制给byte、short、char类型的变量。</li>
-<li>string类型和基本数据类型之间可以相互转换</li>
-<li>在将String类型转成基本数据类型时，要确保String类型能够转成有效数据，比如可以将转&quot;123&quot;，不可以转&quot;abc&quot;</li>
-<li>k = ++ j 等价于 先 j=j+1  再 k=j      ；     k=j++  等价于 先 k=j 再j=j+1</li>
-<li>不能生搬硬套公式，要考虑数学公式和java语言的特点</li>
-<li>“与或非 ”中的“短路与”和“短路非”</li>
-<li>i++和++i参与运算时，就要考虑，运算和自增的顺序i++中i在++前面，故后自增</li>
-</ol></article>
+<ul>
+<li>
+<p>变量名在编译时占空间；在运行时不占空间</p>
+</li>
+<li>
+<p>数据类型分为基本“数据类型”和“引用数据类型”</p>
+</li>
+<li>
+<p>java默认常量（整数）是int  ；  默认常量（小数）是double；常量声明可以后面加i，L等，如5l，5f等</p>
+</li>
+<li>
+<p>对运算结果是小数时的相等判断要小心，因为小数是个近似值</p>
+</li>
+<li>
+<p>在java中，char的本质是一个整数，在输出时，是unicode码对应的字符</p>
+</li>
+<li>
+<p>Unicode码兼容ASCII码
+-（byte，short）和char之间不会相互自动转换</p>
+</li>
+<li>
+<p>byte、short，char  三者可以计算，但在计算时会首先转换为int类型。也就是只要参与运算就是int型</p>
+</li>
+<li>
+<p>表达式结果的类型自动提升为操作数中最大的类型</p>
+</li>
+<li>
+<p>（重点）当整数字面值（默认为int）没有超出byte、short、char的取值范围时，可以直接复制给byte、short、char类型的变量。</p>
+</li>
+<li>
+<p>string类型和基本数据类型之间可以相互转换</p>
+</li>
+<li>
+<p>在将String类型转成基本数据类型时，要确保String类型能够转成有效数据，比如可以将转&quot;123&quot;，不可以转&quot;abc&quot;</p>
+</li>
+<li>
+<p>k = ++ j 等价于 先 j=j+1  再 k=j      ；     k=j++  等价于 先 k=j 再j=j+1</p>
+</li>
+<li>
+<p>不能生搬硬套公式，要考虑数学公式和java语言的特点</p>
+</li>
+<li>
+<p>“与或非 ”中的“短路与”和“短路非”</p>
+</li>
+<li>
+<p>i++和++i参与运算时，就要考虑，运算和自增的顺序i++中i在++前面，故后自增</p>
+</li>
+</ul></article>
     </section>
 
     <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
@@ -392,6 +422,24 @@
             
               <div class="item">
                 <div class="content">
+                  <a href="/posts/myjavacode02/" class="item">MyJavaCode02</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/myjavacode01/" class="item">MyJavaCode01</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/03_java%E5%9F%BA%E7%A1%80/" class="item">java03基础</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a href="/posts/sublime_text3%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/" class="item">Sublime_Text3快捷键大全</a>
                 </div>
               </div>
@@ -404,13 +452,13 @@
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/02_java%E7%AC%94%E8%AE%B0/" class="item">02_java笔记</a>
+                  <a href="/posts/02_java%E7%AC%94%E8%AE%B0/" class="item">java02笔记</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a href="/posts/01_java%E7%AC%94%E8%AE%B0/" class="item">01_java笔记</a>
+                  <a href="/posts/01_java%E7%AC%94%E8%AE%B0/" class="item">java01笔记</a>
                 </div>
               </div>
             
