@@ -177,23 +177,23 @@
 </span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">git status  <span style="color:#75715e">//查看仓库状态
 </span></code></pre></div><p><a href="https://www.bilibili.com/video/BV1q4411i7gL">参考程序羊的B站视频</a></p>
 <h2 id="新添文章推送过程">新添文章推送过程</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//创建public文件夹覆盖旧文件夹
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//创建public文件夹覆盖旧文件夹01
 </span><span style="color:#75715e"></span>hugo <span style="color:#f92672">--</span>theme<span style="color:#f92672">=</span>dream <span style="color:#f92672">--</span>baseUrl<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://xiaoxu1949.github.io&#34;</span> <span style="color:#f92672">--</span>buildDrafts
     
-<span style="color:#75715e">//在public文件夹中 加入暂存区
+<span style="color:#75715e">//在public文件夹中 加入暂存区02
 </span><span style="color:#75715e"></span>git add <span style="color:#f92672">.</span>
     
-<span style="color:#75715e">//在public文件夹中 加入本地仓库
+<span style="color:#75715e">//在public文件夹中 加入本地仓库03
 </span><span style="color:#75715e"></span>git commit <span style="color:#f92672">-</span>m <span style="color:#e6db74">&#34;2021-04-13&#34;</span>
 
-<span style="color:#75715e">//把本地仓库的变化连接到远程仓库主分支
+<span style="color:#75715e">//把本地仓库的变化连接到远程仓库主分支04
 </span><span style="color:#75715e"></span>git pull origin master
    
 <span style="color:#75715e">//推送到远端仓库
-</span><span style="color:#75715e"></span>git push <span style="color:#f92672">-</span>u origin master  <span style="color:#75715e">// 用这个比较好
-</span><span style="color:#75715e">//缩写，少用
-</span><span style="color:#75715e"></span>git push  <span style="color:#75715e">//
-</span></code></pre></div><h2 id="其它">其它</h2>
+</span><span style="color:#75715e"></span>git push <span style="color:#f92672">-</span>u origin master  <span style="color:#75715e">//不必须
+</span><span style="color:#75715e">//缩写，少用05
+</span><span style="color:#75715e"></span>git push  
+</code></pre></div><h2 id="其它">其它</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//学校网络不行，用自己手机热点可以推送成功
 </span><span style="color:#75715e"></span>
 <span style="color:#75715e">//远程仓库里的文件被强制修改了，再次推送时，文件不匹配导致的错误
@@ -383,6 +383,12 @@ $ hugo <span style="color:#66d9ef">new</span> posts<span style="color:#f92672">/
             
               <div class="item">
                 <div class="content">
+                  <a href="/posts/%E6%B0%94%E4%B8%8D%E4%B8%8A%E8%84%B8/" class="item">气不上脸</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
                   <a href="/posts/%E6%89%8B%E6%9C%BA%E4%B8%A2%E4%BA%86%E6%80%8E%E4%B9%88%E5%8A%9E/" class="item">手机丢了怎么办</a>
                 </div>
               </div>
@@ -478,6 +484,24 @@ $ hugo <span style="color:#66d9ef">new</span> posts<span style="color:#f92672">/
           </div>
           <div class="content">
             <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/08_java%E5%9F%BA%E7%A1%80/" class="item">java基础08</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/07_java%E5%9F%BA%E7%A1%80/" class="item">java基础07</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/java_hsp02/" class="item">Java_hsp02</a>
+                </div>
+              </div>
             
               <div class="item">
                 <div class="content">

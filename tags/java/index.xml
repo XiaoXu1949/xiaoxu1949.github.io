@@ -6,7 +6,34 @@
     <description>Recent content in java on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 29 Jun 2021 09:53:01 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Jul 2021 22:49:07 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>java基础08</title>
+      <link>https://xiaoxu1949.github.io/posts/08_java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Fri, 02 Jul 2021 22:49:07 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/08_java%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;断点调试、快捷键&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>java基础07</title>
+      <link>https://xiaoxu1949.github.io/posts/07_java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Fri, 02 Jul 2021 22:44:16 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/07_java%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;多态、动态绑定机制、多态数组、多态参数、==、object类&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java_hsp02</title>
+      <link>https://xiaoxu1949.github.io/posts/java_hsp02/</link>
+      <pubDate>Fri, 02 Jul 2021 22:26:22 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/java_hsp02/</guid>
+      <description>&lt;p&gt;面向编程(中级)：封装、继承、多态、Object类&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>java基础06</title>
       <link>https://xiaoxu1949.github.io/posts/06_java%E5%9F%BA%E7%A1%80/</link>
