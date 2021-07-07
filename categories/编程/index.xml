@@ -6,7 +6,25 @@
     <description>Recent content in 编程 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Fri, 02 Jul 2021 22:49:07 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Jul 2021 23:45:14 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>java基础10</title>
+      <link>https://xiaoxu1949.github.io/posts/10_java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 07 Jul 2021 23:45:14 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/10_java%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;final、抽象类、模板设计模式&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>java基础09</title>
+      <link>https://xiaoxu1949.github.io/posts/09_java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 07 Jul 2021 23:28:53 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/09_java%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;类变量、类方法、main方法、代码块、单例设计模式&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>java基础08</title>
       <link>https://xiaoxu1949.github.io/posts/08_java%E5%9F%BA%E7%A1%80/</link>
