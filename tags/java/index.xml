@@ -6,9 +6,45 @@
     <description>Recent content in java on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Thu, 15 Jul 2021 00:00:14 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Aug 2021 08:52:39 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>14_java基础</title>
+      <title>Java_hsp08</title>
+      <link>https://xiaoxu1949.github.io/posts/java_hsp08/</link>
+      <pubDate>Tue, 10 Aug 2021 08:52:39 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/java_hsp08/</guid>
+      <description>&lt;p&gt;泛型、自定义泛型、泛型的继承和通配符、JUnit&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java_hsp07</title>
+      <link>https://xiaoxu1949.github.io/posts/java_hsp07/</link>
+      <pubDate>Tue, 10 Aug 2021 08:49:29 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/java_hsp07/</guid>
+      <description>&lt;p&gt;(Collection) &amp;ldquo;List&amp;rdquo; :ArrayList 、LinkedList、Vector  /// &amp;ldquo;Set&amp;rdquo; :  HashSet 、LinkedHashSet、TreeSet &amp;mdash;&amp;mdash;-(Map)  HashMap、LinkedHashMap、HashTable、Properties、TreeMap&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>java基础15</title>
+      <link>https://xiaoxu1949.github.io/posts/15_java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Tue, 10 Aug 2021 08:42:01 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/15_java%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;Collection （List、Set）{ArrayList、Vector、LinkedList}   {HashSet、LinkedHashSet、TreeSet}    Map {HashMap、LinkedHashMap、Properties、TreeMap}&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>java基础16</title>
+      <link>https://xiaoxu1949.github.io/posts/16_java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Tue, 10 Aug 2021 08:37:31 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/16_java%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;泛型使用、自定义(类，接口，方法)泛型、泛型的继承和通配符、 JUnit&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>java基础14</title>
       <link>https://xiaoxu1949.github.io/posts/14_java%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Thu, 15 Jul 2021 00:00:14 +0800</pubDate>
       

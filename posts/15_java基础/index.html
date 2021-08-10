@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>java基础15 | </title>
+
+    
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+
+<meta name="author" content="小徐" />
+<meta name="description" content="Collection （List、Set）{ArrayList、Vector、LinkedList} {HashSet、LinkedHashSet、TreeSet} Map {HashMap、LinkedHashMap、Properties、TreeMap}
+" />
+
+
+
+<meta name="generator" content="Hugo 0.79.0" />
+
+<link rel="canonical" href="https://xiaoxu1949.github.io/posts/15_java%E5%9F%BA%E7%A1%80/" />
+
+
+<meta property="og:title" content="java基础15" />
+<meta property="og:description" content="Collection （List、Set）{ArrayList、Vector、LinkedList}   {HashSet、LinkedHashSet、TreeSet}    Map {HashMap、LinkedHashMap、Properties、TreeMap}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xiaoxu1949.github.io/posts/15_java%E5%9F%BA%E7%A1%80/" />
+<meta property="article:published_time" content="2021-08-10T08:42:01+08:00" />
+<meta property="article:modified_time" content="2021-08-10T08:42:01+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="java基础15"/>
+<meta name="twitter:description" content="Collection （List、Set）{ArrayList、Vector、LinkedList}   {HashSet、LinkedHashSet、TreeSet}    Map {HashMap、LinkedHashMap、Properties、TreeMap}"/>
+
+
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/icomoon.css" />
+<link rel="stylesheet" href="/css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+<style>
+  a:hover {
+    text-decoration: underline; 
+  }
+
+  
+  a {
+    color: seagreen !important;
+  }
+  
+
+  
+  .inverted a,
+  .inverted a:hover {
+     color: darkseagreen !important;
+  }
+  
+
+  
+  body.default {
+    
+    background-color: black;
+    
+
+    
+    background-image: url(/img/background.png);
+    
+  }
+  
+
+  
+</style>
+
+    
+
+
+  
+    <link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/gruvbox-light.min.css" />
+  
+
+
+
+
+
+  </head>
+
+  <body class="default">
+    
+<nav class="ui secondary inverted menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/xiaoxu1949.github.io'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
+  
+</nav>
+
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    
+    <section class="ui top attached segment cover">
+      <div class="cover-img" style="background-image: url(/myimg/15_java%e5%9f%ba%e7%a1%80.png);"></div>
+    </section>
+    
+    <section class="ui attached segment">
+      <header>
+        <h1 class="ui large header">
+          java基础15
+          <div class="sub header">
+            @
+            
+              
+                <a href="https://xiaoxu1949.github.io/" target="_blank">小徐</a>
+              
+            
+
+            | 
+                星期二，八月 10 日，2021 年
+              
+
+            | 12 分钟阅读
+
+            | 更新于
+              
+                星期二，八月 10 日，2021 年
+              
+          </div>
+        </h1>
+      </header>
+
+      <article class="main"><p>Collection （List、Set）{ArrayList、Vector、LinkedList}   {HashSet、LinkedHashSet、TreeSet}    Map {HashMap、LinkedHashMap、Properties、TreeMap}</p>
+<p>2021.7.15</p>
+<h3 id="集合">集合</h3>
+<h4 id="数组vs集合">数组VS集合</h4>
+<ul>
+<li>
+<p>数组的缺点</p>
+<ol>
+<li>长度开始时必须指定，而且一旦指定，不能修改</li>
+<li>保存的必须为同一类型的元素</li>
+<li>使用数组进行增加/删除元素比较麻烦</li>
+</ol>
+</li>
+<li>
+<p>集合的好处</p>
+<ol>
+<li>可以动态保存任意多个对象</li>
+<li>提供了一系列方便操作对象的方法：add、remove、set、get等</li>
+<li>使用集合添加、删除新元素代码变得简洁</li>
+</ol>
+</li>
+</ul>
+<h4 id="集合的框架体系">集合的框架体系</h4>
+<ul>
+<li>集合主要是两组(单列集合 , 双列集合)</li>
+<li>Collection 接口有两个重要的子接口 List 、Set , 他们的实现子类都是单列集合</li>
+<li>Map 接口的实现子类 是双列集合，存放的 K-V</li>
+</ul>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210715130747128.png" alt="image-20210715130747128"></p>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210715130801104.png" alt="image-20210715130801104"></p>
+<h3 id="collection-接口">Collection 接口</h3>
+<h4 id="collection-接口实现类的特点">Collection 接口实现类的特点</h4>
+<ol>
+<li>collection实现子类可以存放多个元素，每个元素可以是Object</li>
+<li>有些Collection的实现类，可以存放重复的元素，有些不可以</li>
+<li>Collection的实现类，有些是有序的(List),有些是无序的（Set）</li>
+<li>Collecction接口没有直接的实现子类，是通过它的子接口Set和List来实现的</li>
+</ol>
+<h4 id="collection-接口常用方法以实现子类-arraylist-来演示">Collection 接口常用方法【以实现子类 ArrayList 来演示】</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">(</span>1<span style="color:#f92672">)</span>add<span style="color:#f92672">:</span>添加单个元素
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;jack&#34;</span><span style="color:#f92672">);</span>
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>10<span style="color:#f92672">);</span><span style="color:#75715e">//list.add(new Integer(10))
+</span><span style="color:#75715e"></span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;list=&#34;</span> <span style="color:#f92672">+</span> list<span style="color:#f92672">);</span>
+
+<span style="color:#f92672">(</span>2<span style="color:#f92672">)</span>remove<span style="color:#f92672">:</span>删除指定元素
+<span style="color:#75715e">//list.remove(0);//删除第一个元素
+</span><span style="color:#75715e"></span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span><span style="color:#75715e">//指定删除某个元素
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;list=&#34;</span> <span style="color:#f92672">+</span> list<span style="color:#f92672">);</span>
+
+<span style="color:#f92672">(</span>3<span style="color:#f92672">)</span>contains<span style="color:#f92672">:</span>查找元素是否存在
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">contains</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;jack&#34;</span><span style="color:#f92672">));</span><span style="color:#75715e">//T
+</span><span style="color:#75715e"></span>
+<span style="color:#f92672">(</span>4<span style="color:#f92672">)</span>size<span style="color:#f92672">:</span>获取元素个数
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">());</span><span style="color:#75715e">//2
+</span><span style="color:#75715e"></span>
+<span style="color:#f92672">(</span>5<span style="color:#f92672">)</span>isEmpty<span style="color:#f92672">:</span>判断是否为空
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">());</span><span style="color:#75715e">//F
+</span><span style="color:#75715e"></span>
+<span style="color:#f92672">(</span>6<span style="color:#f92672">)</span>clear<span style="color:#f92672">:</span>清空
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">clear</span><span style="color:#f92672">();</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;list=&#34;</span> <span style="color:#f92672">+</span> list<span style="color:#f92672">);</span>
+
+<span style="color:#f92672">(</span>7<span style="color:#f92672">)</span>addAll<span style="color:#f92672">:</span>添加多个元素
+ArrayList list2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">();</span>
+list2<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;红楼梦&#34;</span><span style="color:#f92672">);</span>
+list2<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;三国演义&#34;</span><span style="color:#f92672">);</span>
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">addAll</span><span style="color:#f92672">(</span>list2<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;list=&#34;</span> <span style="color:#f92672">+</span> list<span style="color:#f92672">);</span>
+
+<span style="color:#f92672">(</span>8<span style="color:#f92672">)</span>containsAll<span style="color:#f92672">:</span>查找多个元素是否都存在
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">containsAll</span><span style="color:#f92672">(</span>list2<span style="color:#f92672">));</span><span style="color:#75715e">//T
+</span><span style="color:#75715e"></span>
+<span style="color:#f92672">(</span>9<span style="color:#f92672">)</span>removeAll<span style="color:#960050;background-color:#1e0010">：</span>删除多个元素
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;聊斋&#34;</span><span style="color:#f92672">);</span>
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">removeAll</span><span style="color:#f92672">(</span>list2<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;list=&#34;</span> <span style="color:#f92672">+</span> list<span style="color:#f92672">);</span><span style="color:#75715e">//[聊斋]
+</span><span style="color:#75715e">//说明：以ArrayList实现类来演示.
+</span></code></pre></div><h4 id="collection-接口遍历元素方式-1-使用iterator迭代器">Collection 接口遍历元素方式 1-使用Iterator(迭代器)</h4>
+<ul>
+<li>
+<p>老师教大家一个快捷键，快速生成 while =&gt; itit</p>
+</li>
+<li>
+<p>示所有的快捷键的的快捷键 ctrl + j</p>
+</li>
+</ul>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210715135041598.png" alt="image-20210715135041598"></p>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210715135048520.png" alt="image-20210715135048520"></p>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210715135143034.png" alt="image-20210715135143034"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Collection col <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">();</span><span style="color:#75715e">//向上转型
+</span><span style="color:#75715e"></span>
+col<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Book<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;三国演义&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;罗贯中&#34;</span><span style="color:#f92672">,</span> 10<span style="color:#f92672">.</span><span style="color:#a6e22e">1</span><span style="color:#f92672">));</span>
+col<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Book<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小李飞刀&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;古龙&#34;</span><span style="color:#f92672">,</span> 5<span style="color:#f92672">.</span><span style="color:#a6e22e">1</span><span style="color:#f92672">));</span>
+col<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Book<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;红楼梦&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;曹雪芹&#34;</span><span style="color:#f92672">,</span> 34<span style="color:#f92672">.</span><span style="color:#a6e22e">6</span><span style="color:#f92672">));</span>
+
+<span style="color:#75715e">//System.out.println(&#34;col=&#34; + col);
+</span><span style="color:#75715e">//现在老师希望能够遍历 col集合
+</span><span style="color:#75715e">//1. 先得到 col 对应的 迭代器
+</span><span style="color:#75715e"></span>Iterator iterator <span style="color:#f92672">=</span> col<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">();</span><span style="color:#75715e">//向上转型
+</span><span style="color:#75715e">//2. 使用while循环遍历
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span><span style="color:#75715e">//判断是否还有数据
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//返回下一个元素，类型是Object
+</span><span style="color:#75715e"></span>    Object obj <span style="color:#f92672">=</span> iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;obj=&#34;</span> <span style="color:#f92672">+</span> obj<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//老师教大家一个快捷键，快速生成 while =&gt; itit
+</span><span style="color:#75715e">//显示所有的快捷键的的快捷键 ctrl + j
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+    Object obj <span style="color:#f92672">=</span> iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;obj=&#34;</span> <span style="color:#f92672">+</span> obj<span style="color:#f92672">);</span>
+
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//3. 当退出while循环后 , 这时iterator迭代器，指向最后的元素
+</span><span style="color:#75715e">//   iterator.next();//NoSuchElementException
+</span><span style="color:#75715e">//4. 如果希望再次遍历，需要重置我们的迭代器
+</span><span style="color:#75715e"></span>iterator <span style="color:#f92672">=</span> col<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">();</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;===第二次遍历===&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+    Object obj <span style="color:#f92672">=</span> iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;obj=&#34;</span> <span style="color:#f92672">+</span> obj<span style="color:#f92672">);</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="collection-接口遍历对象方式-2-增强-for-循环">Collection 接口遍历对象方式 2-增强 for 循环</h4>
+<ul>
+<li>增强for循环，可以替代iterator迭代器，特点是增强for据实简化版的iterator，本质一样。只能用于遍历集合或数组</li>
+<li>基本语法  for（元素类型 元素名 ： 集合名或数组名）{ 访问元素 }</li>
+<li>快捷键方式 I</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Collection col <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">();</span>
+
+col<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Book<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;三国演义&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;罗贯中&#34;</span><span style="color:#f92672">,</span> 10<span style="color:#f92672">.</span><span style="color:#a6e22e">1</span><span style="color:#f92672">));</span>
+col<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Book<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;小李飞刀&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;古龙&#34;</span><span style="color:#f92672">,</span> 5<span style="color:#f92672">.</span><span style="color:#a6e22e">1</span><span style="color:#f92672">));</span>
+col<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Book<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;红楼梦&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;曹雪芹&#34;</span><span style="color:#f92672">,</span> 34<span style="color:#f92672">.</span><span style="color:#a6e22e">6</span><span style="color:#f92672">));</span>
+
+<span style="color:#75715e">//老韩解读
+</span><span style="color:#75715e">//1. 使用增强for, 在Collection集合
+</span><span style="color:#75715e">//2. 增强for， 底层仍然是迭代器
+</span><span style="color:#75715e">//3. 增强for可以理解成就是简化版本的 迭代器遍历
+</span><span style="color:#75715e">//4. 快捷键方式 I
+</span><span style="color:#75715e">//        for (Object book : col) {
+</span><span style="color:#75715e">//            System.out.println(&#34;book=&#34; + book);
+</span><span style="color:#75715e">//        }
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Object o <span style="color:#f92672">:</span> col<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;book=&#34;</span> <span style="color:#f92672">+</span> o<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">//增强for，也可以直接在数组使用
+</span><span style="color:#75715e">//        int[] nums = {1, 8, 10, 90};
+</span><span style="color:#75715e">//        for (int i : nums) {
+</span><span style="color:#75715e">//            System.out.println(&#34;i=&#34; + i);
+</span><span style="color:#75715e">//        }
+</span></code></pre></div><h3 id="list-接口和常用方法">List 接口和常用方法</h3>
+<h4 id="list-接口基本介绍">List 接口基本介绍</h4>
+<ul>
+<li>List接口是Collection接口的子接口
+<ol>
+<li>List集合类中元素有序(即添加顺序和取出顺序一致)、且可以重复</li>
+<li>List集合中的每个元素都有其对应的顺序索引，即支持索引</li>
+<li>List容器中的元素都对应一个整数型的序号记载其在容器中的位置，可以根据序号存取容器中的对应元素</li>
+<li>JDK API中List接口的实现类有许多，常用的有ArrayList、LinkedList、Vector</li>
+</ol>
+</li>
+</ul>
+<h4 id="list-接口常用方法">List 接口常用方法</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">();</span>
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;张三丰&#34;</span><span style="color:#f92672">);</span>
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;贾宝玉&#34;</span><span style="color:#f92672">);</span>
+
+<span style="color:#960050;background-color:#1e0010">【</span>1<span style="color:#960050;background-color:#1e0010">】</span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">,</span> Object ele<span style="color:#f92672">):</span>在index位置插入ele元素
+<span style="color:#75715e">//在index = 1的位置插入一个对象
+</span><span style="color:#75715e"></span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;韩顺平&#34;</span><span style="color:#f92672">);</span>
+
+<span style="color:#960050;background-color:#1e0010">【</span>2<span style="color:#960050;background-color:#1e0010">】</span><span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">addAll</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">,</span> Collection eles<span style="color:#f92672">):</span>从index位置开始将eles中的所有元素添加进来
+List list2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">();</span>
+list2<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;jack&#34;</span><span style="color:#f92672">);</span>
+list2<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;tom&#34;</span><span style="color:#f92672">);</span>
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">addAll</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> list2<span style="color:#f92672">);</span>
+
+<span style="color:#960050;background-color:#1e0010">【</span>3<span style="color:#960050;background-color:#1e0010">】</span>Object <span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">):</span>获取指定index位置的元素
+<span style="color:#75715e">//说过
+</span><span style="color:#75715e"></span>
+<span style="color:#960050;background-color:#1e0010">【</span>4<span style="color:#960050;background-color:#1e0010">】</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">indexOf</span><span style="color:#f92672">(</span>Object obj<span style="color:#f92672">):</span>返回obj在集合中首次出现的位置
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">indexOf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;tom&#34;</span><span style="color:#f92672">));</span><span style="color:#75715e">//2
+</span><span style="color:#75715e"></span>
+<span style="color:#960050;background-color:#1e0010">【</span>5<span style="color:#960050;background-color:#1e0010">】</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">lastIndexOf</span><span style="color:#f92672">(</span>Object obj<span style="color:#f92672">):</span>返回obj在当前集合中末次出现的位置
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;韩顺平&#34;</span><span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;list=&#34;</span> <span style="color:#f92672">+</span> list<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>list<span style="color:#f92672">.</span><span style="color:#a6e22e">lastIndexOf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;韩顺平&#34;</span><span style="color:#f92672">));</span>
+
+<span style="color:#960050;background-color:#1e0010">【</span>6<span style="color:#960050;background-color:#1e0010">】</span> Object <span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">):</span>移除指定index位置的元素<span style="color:#960050;background-color:#1e0010">，</span>并返回此元素
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>0<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;list=&#34;</span> <span style="color:#f92672">+</span> list<span style="color:#f92672">);</span>
+
+<span style="color:#960050;background-color:#1e0010">【</span>7<span style="color:#960050;background-color:#1e0010">】</span>Object <span style="color:#a6e22e">set</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> index<span style="color:#f92672">,</span> Object ele<span style="color:#f92672">):</span>设置指定index位置的元素为ele <span style="color:#f92672">,</span> 相当于是替换<span style="color:#f92672">.</span>
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;玛丽&#34;</span><span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;list=&#34;</span> <span style="color:#f92672">+</span> list<span style="color:#f92672">);</span>
+    
+<span style="color:#960050;background-color:#1e0010">【</span>8<span style="color:#960050;background-color:#1e0010">】</span>List <span style="color:#a6e22e">subList</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> fromIndex<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> toIndex<span style="color:#f92672">):</span>返回从fromIndex到toIndex位置的子集合
+ <span style="color:#75715e">// 注意返回的子集合 fromIndex &lt;= subList &lt; toIndex
+</span><span style="color:#75715e"></span>List returnlist <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">subList</span><span style="color:#f92672">(</span>0<span style="color:#f92672">,</span> 2<span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;returnlist=&#34;</span> <span style="color:#f92672">+</span> returnlist<span style="color:#f92672">);</span>
+</code></pre></div><h4 id="list-的三种遍历方式">List 的三种遍历方式</h4>
+<ul>
+<li>List 的三个实现子类 [ArrayList, LinkedList,Vector]</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//List 接口的实现子类 Vector LinkedList
+</span><span style="color:#75715e">//List list = new ArrayList();
+</span><span style="color:#75715e">//List list = new Vector();
+</span><span style="color:#75715e"></span>List list <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> LinkedList<span style="color:#f92672">();</span>
+
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;jack&#34;</span><span style="color:#f92672">);</span>
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;tom&#34;</span><span style="color:#f92672">);</span>
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;鱼香肉丝&#34;</span><span style="color:#f92672">);</span>
+list<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;北京烤鸭子&#34;</span><span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//遍历
+</span><span style="color:#75715e">//1. 迭代器
+</span><span style="color:#75715e"></span>Iterator iterator <span style="color:#f92672">=</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">();</span>
+<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+    Object obj <span style="color:#f92672">=</span>  iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>obj<span style="color:#f92672">);</span>
+
+<span style="color:#f92672">}</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;=====增强for=====&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#75715e">//2. 增强for
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Object o <span style="color:#f92672">:</span> list<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;o=&#34;</span> <span style="color:#f92672">+</span> o<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;=====普通for====&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#75715e">//3. 使用普通for
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;对象=&#34;</span> <span style="color:#f92672">+</span> list<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i<span style="color:#f92672">));</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="1arraylist-的注意事项">1.ArrayList 的注意事项</h4>
+<ol>
+<li>ArrayList可以加入null，并且多个</li>
+<li>ArrayList是由数组来实现数据存储的</li>
+<li>ArrayList基本等同于Vector，除了ArrayList是线程不安全(执行效率高)，在多线程情况下，不建议使用ArrayList</li>
+</ol>
+<h4 id="arraylist-的底层操作机制源码分析重点难点">ArrayList 的底层操作机制源码分析(重点，难点.)</h4>
+<ol>
+<li>
+<p>ArrayList中维护了一个Object类型的数据（数组）elementData        transient  Object[]  elementData</p>
+<ul>
+<li>transient  表示瞬间的，短暂的，表示该属性不会被序列化</li>
+</ul>
+</li>
+<li>
+<p>当创建ArrayList对象时，如果使用的是无参构造器，则初始elementData容量为0，第一次添加，则扩容elementData为10，如需要再次扩容，则扩容elementData为1.5倍</p>
+</li>
+<li>
+<p>如果使用的是指定大小的构造器，则初始elementData容量为指定大小，如果需要扩容，则直接扩容elementData为1.5倍</p>
+</li>
+</ol>
+<h4 id="2vector-底层结构和源码剖析">2.Vector 底层结构和源码剖析</h4>
+<ul>
+<li>Vector底层也是一个对象数组，protected  Object[] elementData</li>
+<li>Vector是线程同步的，即线程安全，Vector类的操作方法带有synchronized</li>
+<li>在开发中，需要线程同步安全时，考虑使用Vector</li>
+</ul>
+<h4 id="vector-和arraylist-的比较">Vector 和ArrayList 的比较</h4>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210716131408525.png" alt="image-20210716131408525"></p>
+<h4 id="3linkedlist-底层结构">3.LinkedList 底层结构</h4>
+<ul>
+<li>LinkedList底层实现了双向链表和双端队列的特点</li>
+<li>可以添加任意元素（元素可以重复），包括null</li>
+<li>线程不安全，没有实现同步</li>
+</ul>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210716145910993.png" alt="image-20210716145910993"></p>
+<h4 id="linkedlist-的增删改查案例">LinkedList 的增删改查案例</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">linkedList<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+linkedList<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">();</span> <span style="color:#75715e">// 这里默认删除的是第一个结点
+</span><span style="color:#75715e"></span>linkedList<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> 999<span style="color:#f92672">);</span>
+linkedList<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span><span style="color:#75715e">//get(1) 是得到双向链表的第二个对象
+</span><span style="color:#75715e"></span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;===LinkeList 遍历普通 for====&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> linkedList<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>linkedList<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i<span style="color:#f92672">));</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="arraylist-和linkedlist-的比较">ArrayList 和LinkedList 的比较</h4>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210716150245452.png" alt="image-20210716150245452"></p>
+<h3 id="set-接口和常用方法">Set 接口和常用方法</h3>
+<h4 id="set-接口基本介绍">Set 接口基本介绍</h4>
+<ul>
+<li>
+<p>无序（添加和取出的顺序不一致），没有索引</p>
+</li>
+<li>
+<p>不允许重复元素，所以最多包含一个null</p>
+</li>
+<li>
+<p>和 List 接口一样, Set 接口也是 Collection 的子接口，因此，常用方法和 Collection 接口一样.</p>
+</li>
+</ul>
+<h4 id="set-接口的遍历方式">Set 接口的遍历方式</h4>
+<ol>
+<li>可以使用迭代器</li>
+<li>增强for</li>
+<li>不能使用索引的方式来获取</li>
+</ol>
+<h4 id="set-接口的常用方法">Set 接口的常用方法</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Set set <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashSet<span style="color:#f92672">();</span>
+set<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;john&#34;</span><span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;=====使用迭代器====&#34;</span><span style="color:#f92672">);</span>
+Iterator iterator <span style="color:#f92672">=</span> set<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">();</span>
+<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+     Object obj <span style="color:#f92672">=</span> iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+     System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;obj=&#34;</span> <span style="color:#f92672">+</span> obj<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+set<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+</code></pre></div><h4 id="set-接口实现类-hashset">Set 接口实现类-HashSet</h4>
+<ol>
+<li>HashSet实现了Set接口</li>
+<li>HashSet实际上是HashMap</li>
+<li>可以存放null值，但是只能有一个null</li>
+<li>HashSet不保证元素是有序的，取决于hash后，再确定索引的结果（即，不保证存放元素的顺序和取出顺序一致）</li>
+<li>不能有重复元素/对象。</li>
+<li>底层维护了一个数组+（多个）单向链表</li>
+</ol>
+<h4 id="hashset-底层机制说明">HashSet 底层机制说明</h4>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210717113239511.png" alt="image-20210717113239511"></p>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210717113247540.png" alt="image-20210717113247540"></p>
+<ul>
+<li>hash值不同时，也可能在table表的同一个位置，由于哈希值不同，则不会判断equals()，会直接加在该位置后面，形成单向链表</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">xiaoxu源码尝试解读<span style="color:#960050;background-color:#1e0010">：</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>p<span style="color:#f92672">.</span><span style="color:#a6e22e">hash</span> <span style="color:#f92672">==</span> hash <span style="color:#f92672">&amp;&amp;</span>
+                <span style="color:#f92672">((</span>k <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">key</span><span style="color:#f92672">)</span> <span style="color:#f92672">==</span> key <span style="color:#f92672">||</span> <span style="color:#f92672">(</span>key <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> key<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>k<span style="color:#f92672">))))</span>
+                e <span style="color:#f92672">=</span> p<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>p <span style="color:#66d9ef">instanceof</span> TreeNode<span style="color:#f92672">)</span>
+                e <span style="color:#f92672">=</span> <span style="color:#f92672">((</span>TreeNode<span style="color:#f92672">&lt;</span>K<span style="color:#f92672">,</span>V<span style="color:#f92672">&gt;)</span>p<span style="color:#f92672">).</span><span style="color:#a6e22e">putTreeVal</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">,</span> tab<span style="color:#f92672">,</span> hash<span style="color:#f92672">,</span> key<span style="color:#f92672">,</span> value<span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> binCount <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> <span style="color:#f92672">;</span> <span style="color:#f92672">++</span>binCount<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">((</span>e <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                        p<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> newNode<span style="color:#f92672">(</span>hash<span style="color:#f92672">,</span> key<span style="color:#f92672">,</span> value<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+                        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>binCount <span style="color:#f92672">&gt;=</span> TREEIFY_THRESHOLD <span style="color:#f92672">-</span> 1<span style="color:#f92672">)</span> <span style="color:#75715e">// -1 for 1st
+</span><span style="color:#75715e"></span>                            treeifyBin<span style="color:#f92672">(</span>tab<span style="color:#f92672">,</span> hash<span style="color:#f92672">);</span>
+                        <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+                    <span style="color:#f92672">}</span>
+                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>e<span style="color:#f92672">.</span><span style="color:#a6e22e">hash</span> <span style="color:#f92672">==</span> hash <span style="color:#f92672">&amp;&amp;</span>
+                        <span style="color:#f92672">((</span>k <span style="color:#f92672">=</span> e<span style="color:#f92672">.</span><span style="color:#a6e22e">key</span><span style="color:#f92672">)</span> <span style="color:#f92672">==</span> key <span style="color:#f92672">||</span> <span style="color:#f92672">(</span>key <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> key<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>k<span style="color:#f92672">))))</span>
+                        <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+                    p <span style="color:#f92672">=</span> e<span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+
+<span style="color:#f92672">(</span>p<span style="color:#f92672">.</span><span style="color:#a6e22e">hash</span> <span style="color:#f92672">==</span> hash <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">((</span>k <span style="color:#f92672">=</span> p<span style="color:#f92672">.</span><span style="color:#a6e22e">key</span><span style="color:#f92672">)</span> <span style="color:#f92672">==</span> key <span style="color:#f92672">||</span> <span style="color:#f92672">(</span>key <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> key<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>k<span style="color:#f92672">))))</span>
+这句话表明<span style="color:#960050;background-color:#1e0010">，</span>需要hash值相同<span style="color:#960050;background-color:#1e0010">，</span>并且equals<span style="color:#f92672">()</span>相同时<span style="color:#960050;background-color:#1e0010">，</span>才判定是同一个元素<span style="color:#960050;background-color:#1e0010">！！！</span>
+</code></pre></div><p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210717113259148.png" alt="image-20210717113259148"></p>
+<ul>
+<li>loadFactor，每加一个节点，指table和链表上的节点，两者都算</li>
+<li>当链表上超出8个节点时，table没有达到64，就会触发扩容</li>
+</ul>
+<h4 id="set-接口实现类-linkedhashset">Set 接口实现类-LinkedHashSet</h4>
+<ul>
+<li>底层是LinkedHashMap，维护了一个数组+（一个）双向链表</li>
+<li>LinkedHashSet是HashSet的子类</li>
+<li>LinkedHashSet根据元素的hashCode值来决定元素的存储位置，同时使用链表维护元素的次序，这使得元素看起来是以插入的顺序保存的</li>
+<li>LinkedHashSet不允许添加重复元素</li>
+</ul>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210717152103405.png" alt="image-20210717152103405"></p>
+<h3 id="map-接口和常用方法">Map 接口和常用方法</h3>
+<h4 id="map-接口实现类的特点-很实用">Map 接口实现类的特点 [很实用]</h4>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210717152258175.png" alt="image-20210717152258175"></p>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210717152407958.png" alt="image-20210717152407958"></p>
+<ul>
+<li>当有相同的key , 就等价于替换.</li>
+</ul>
+<h4 id="map-接口常用方法">Map 接口常用方法</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Map map <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HashMap<span style="color:#f92672">();</span>
+<span style="color:#75715e">//remove:根据键删除映射关系
+</span><span style="color:#75715e"></span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;map=&#34;</span> <span style="color:#f92672">+</span> map<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//get：根据键获取值
+</span><span style="color:#75715e"></span>Object val <span style="color:#f92672">=</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;鹿晗&#34;</span><span style="color:#f92672">);</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;val=&#34;</span> <span style="color:#f92672">+</span> val<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//size:获取元素个数
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;k-v=&#34;</span> <span style="color:#f92672">+</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">());</span>
+
+<span style="color:#75715e">//isEmpty:判断个数是否为0
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">());</span><span style="color:#75715e">//F
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//clear:清除k-v
+</span><span style="color:#75715e"></span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">clear</span><span style="color:#f92672">();</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;map=&#34;</span> <span style="color:#f92672">+</span> map<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">//containsKey:查找键是否存在
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;结果=&#34;</span> <span style="color:#f92672">+</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">containsKey</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;hsp&#34;</span><span style="color:#f92672">));</span><span style="color:#75715e">//T
+</span></code></pre></div><h4 id="map-接口遍历方法">Map 接口遍历方法</h4>
+<p><img src="https://myblogimagic.oss-cn-beijing.aliyuncs.com/img/image-20210717164643971.png" alt="image-20210717164643971"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//第一组: 先取出 所有的Key , 通过Key 取出对应的Value
+</span><span style="color:#75715e"></span>Set keyset <span style="color:#f92672">=</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">keySet</span><span style="color:#f92672">();</span>
+<span style="color:#75715e">//(1) 增强for
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;-----第一种方式-------&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Object key <span style="color:#f92672">:</span> keyset<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>key <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>key<span style="color:#f92672">));</span>
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//(2) 迭代器
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;----第二种方式--------&#34;</span><span style="color:#f92672">);</span>
+Iterator iterator <span style="color:#f92672">=</span> keyset<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">();</span>
+<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+    Object key <span style="color:#f92672">=</span>  iterator<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>key <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>key<span style="color:#f92672">));</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">//第二组: 把所有的values取出
+</span><span style="color:#75715e"></span>Collection values <span style="color:#f92672">=</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">values</span><span style="color:#f92672">();</span>
+<span style="color:#75715e">//这里可以使用所有的Collections使用的遍历方法
+</span><span style="color:#75715e">//(1) 增强for
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;---取出所有的value 增强for----&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Object value <span style="color:#f92672">:</span> values<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//(2) 迭代器
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;---取出所有的value 迭代器----&#34;</span><span style="color:#f92672">);</span>
+Iterator iterator2 <span style="color:#f92672">=</span> values<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">();</span>
+<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>iterator2<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+    Object value <span style="color:#f92672">=</span>  iterator2<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">//第三组: 通过EntrySet 来获取 k-v
+</span><span style="color:#75715e"></span>Set entrySet <span style="color:#f92672">=</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">entrySet</span><span style="color:#f92672">();</span><span style="color:#75715e">// EntrySet&lt;Map.Entry&lt;K,V&gt;&gt;
+</span><span style="color:#75715e">//(1) 增强for
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;----使用EntrySet 的 for增强(第3种)----&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Object entry <span style="color:#f92672">:</span> entrySet<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">//将entry 转成 Map.Entry
+</span><span style="color:#75715e"></span>    Map<span style="color:#f92672">.</span><span style="color:#a6e22e">Entry</span> m <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Map<span style="color:#f92672">.</span><span style="color:#a6e22e">Entry</span><span style="color:#f92672">)</span> entry<span style="color:#f92672">;</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>m<span style="color:#f92672">.</span><span style="color:#a6e22e">getKey</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> m<span style="color:#f92672">.</span><span style="color:#a6e22e">getValue</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span>
+<span style="color:#75715e">//(2) 迭代器
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;----使用EntrySet 的 迭代器(第4种)----&#34;</span><span style="color:#f92672">);</span>
+Iterator iterator3 <span style="color:#f92672">=</span> entrySet<span style="color:#f92672">.</span><span style="color:#a6e22e">iterator</span><span style="color:#f92672">();</span>
+<span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>iterator3<span style="color:#f92672">.</span><span style="color:#a6e22e">hasNext</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+    Object entry <span style="color:#f92672">=</span>  iterator3<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+    <span style="color:#75715e">//System.out.println(next.getClass());//HashMap$Node -实现-&gt; Map.Entry (getKey,getValue)
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//向下转型 Map.Entry
+</span><span style="color:#75715e"></span>    Map<span style="color:#f92672">.</span><span style="color:#a6e22e">Entry</span> m <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Map<span style="color:#f92672">.</span><span style="color:#a6e22e">Entry</span><span style="color:#f92672">)</span> entry<span style="color:#f92672">;</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>m<span style="color:#f92672">.</span><span style="color:#a6e22e">getKey</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;-&#34;</span> <span style="color:#f92672">+</span> m<span style="color:#f92672">.</span><span style="color:#a6e22e">getValue</span><span style="color:#f92672">());</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h4 id="map-接口实现类-hashmap">Map 接口实现类-HashMap</h4>
+<p><img src="G:%5Cmyblog%5Ccontent%5Cposts%5C15_java%E5%9F%BA%E7%A1%80.assets%5Cimage-20210802174828526.png" alt="image-20210802174828526"></p>
+<h4 id="hashmap-底层机制及源码剖析">HashMap 底层机制及源码剖析</h4>
+<p><img src="G:%5Cmyblog%5Ccontent%5Cposts%5C15_java%E5%9F%BA%E7%A1%80.assets%5Cimage-20210802174945325.png" alt="image-20210802174945325"></p>
+<p><img src="G:%5Cmyblog%5Ccontent%5Cposts%5C15_java%E5%9F%BA%E7%A1%80.assets%5Cimage-20210802174950667.png" alt="image-20210802174950667"></p>
+<h4 id="map-接口实现类-hashtable">Map 接口实现类-Hashtable</h4>
+<p><img src="G:%5Cmyblog%5Ccontent%5Cposts%5C15_java%E5%9F%BA%E7%A1%80.assets%5Cimage-20210802175035489.png" alt="image-20210802175035489"></p>
+<h4 id="hashtable-和-hashmap-对比">Hashtable 和 HashMap 对比</h4>
+<p><img src="G:%5Cmyblog%5Ccontent%5Cposts%5C15_java%E5%9F%BA%E7%A1%80.assets%5Cimage-20210802175055054.png" alt="image-20210802175055054"></p>
+<h4 id="map-接口实现类-properties">Map 接口实现类-Properties</h4>
+<p><img src="G:%5Cmyblog%5Ccontent%5Cposts%5C15_java%E5%9F%BA%E7%A1%80.assets%5Cimage-20210802175109879.png" alt="image-20210802175109879"></p>
+<h3 id="总结-开发中如何选择集合实现类记住">总结-开发中如何选择集合实现类(记住)</h3>
+<p><img src="G:%5Cmyblog%5Ccontent%5Cposts%5C15_java%E5%9F%BA%E7%A1%80.assets%5Cimage-20210802175144385.png" alt="image-20210802175144385"></p>
+<h4 id="treeset">TreeSet</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//老韩解读
+</span><span style="color:#75715e">//1. 当我们使用无参构造器，创建 TreeSet 时，仍然是无序的
+</span><span style="color:#75715e">//2. 老师希望添加的元素，按照字符串大小来排序
+</span><span style="color:#75715e">//3. 使用 TreeSet 提供的一个构造器，可以传入一个比较器(匿名内部类)
+</span><span style="color:#75715e">// 并指定排序规则
+</span><span style="color:#75715e">//4. 简单看看源码
+</span><span style="color:#75715e">//老韩解读
+</span><span style="color:#75715e"></span><span style="color:#75715e">/*
+</span><span style="color:#75715e">1. 构造器把传入的比较器对象，赋给了 TreeSet 的底层的 TreeMap 的属性 this.comparator
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">public TreeMap(Comparator&lt;? super K&gt; comparator) {
+</span><span style="color:#75715e">	this.comparator = comparator;
+</span><span style="color:#75715e">}
+</span><span style="color:#75715e">2. 在 调用 treeSet.add(&#34;tom&#34;), 在底层会执行到
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">if (cpr != null) {//cpr 就是我们的匿名内部类(对象)
+</span><span style="color:#75715e">	do {
+</span><span style="color:#75715e">			parent = t;
+</span><span style="color:#75715e">            //动态绑定到我们的匿名内部类(对象)compare
+</span><span style="color:#75715e">            cmp = cpr.compare(key, t.key);
+</span><span style="color:#75715e">            if (cmp &lt; 0)
+</span><span style="color:#75715e">            t = t.left;
+</span><span style="color:#75715e">            else if (cmp &gt; 0)
+</span><span style="color:#75715e">            t = t.right;
+</span><span style="color:#75715e">            else //如果相等，即返回 0,这个 Key 就没有加入
+</span><span style="color:#75715e">            return t.setValue(value);
+</span><span style="color:#75715e">            } while (t != null);
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">		}
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#75715e">// TreeSet treeSet = new TreeSet();
+</span><span style="color:#75715e"></span>TreeSet treeSet <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeSet<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Comparator<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+<span style="color:#a6e22e">@Override</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compare</span><span style="color:#f92672">(</span>Object o1<span style="color:#f92672">,</span> Object o2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">//下面 调用 String 的 compareTo 方法进行字符串大小比较
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//如果老韩要求加入的元素，按照长度大小排序
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//return ((String) o2).compareTo((String) o1);
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">((</span>String<span style="color:#f92672">)</span> o1<span style="color:#f92672">).</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> <span style="color:#f92672">((</span>String<span style="color:#f92672">)</span> o2<span style="color:#f92672">).</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+<span style="color:#f92672">});</span>
+<span style="color:#75715e">//添加数据.
+</span><span style="color:#75715e"></span>treeSet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;jack&#34;</span><span style="color:#f92672">);</span>
+treeSet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;tom&#34;</span><span style="color:#f92672">);</span><span style="color:#75715e">//3
+</span><span style="color:#75715e"></span>treeSet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sp&#34;</span><span style="color:#f92672">);</span>
+treeSet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">);</span>
+treeSet<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;abc&#34;</span><span style="color:#f92672">);</span><span style="color:#75715e">//3
+</span><span style="color:#75715e"></span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;treeSet=&#34;</span> <span style="color:#f92672">+</span> treeSet<span style="color:#f92672">);</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//使用默认的构造器，创建 TreeMap, 是无序的(也没有排序)
+</span><span style="color:#75715e"></span><span style="color:#75715e">/*
+</span><span style="color:#75715e">老韩要求：按照传入的 k(String) 的大小进行排序
+</span><span style="color:#75715e">*/</span>
+<span style="color:#75715e">// TreeMap treeMap = new TreeMap();
+</span><span style="color:#75715e"></span>TreeMap treeMap <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TreeMap<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Comparator<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compare</span><span style="color:#f92672">(</span>Object o1<span style="color:#f92672">,</span> Object o2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">//按照传入的 k(String) 的大小进行排序
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">//按照 K(String) 的长度大小排序
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">//return ((String) o2).compareTo((String) o1);
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">((</span>String<span style="color:#f92672">)</span> o2<span style="color:#f92672">).</span><span style="color:#a6e22e">length</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> <span style="color:#f92672">((</span>String<span style="color:#f92672">)</span> o1<span style="color:#f92672">).</span><span style="color:#a6e22e">length</span><span style="color:#f92672">();</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">});</span>
+treeMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;jack&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;杰克&#34;</span><span style="color:#f92672">);</span>
+treeMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;tom&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;汤姆&#34;</span><span style="color:#f92672">);</span>
+treeMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;kristina&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;克瑞斯提诺&#34;</span><span style="color:#f92672">);</span>
+treeMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;smith&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;斯密斯&#34;</span><span style="color:#f92672">);</span>
+treeMap<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;hsp&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;韩顺平&#34;</span><span style="color:#f92672">);</span><span style="color:#75715e">//加入不了
+</span><span style="color:#75715e"></span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;treemap=&#34;</span> <span style="color:#f92672">+</span> treeMap<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">老韩解读源码：
+</span><span style="color:#75715e">1. 构造器. 把传入的实现了 Comparator 接口的匿名内部类(对象)，传给给 TreeMap 的 comparator
+</span><span style="color:#75715e">public TreeMap(Comparator&lt;? super K&gt; comparator) {
+</span><span style="color:#75715e">	this.comparator = comparator;
+</span><span style="color:#75715e">}
+</span><span style="color:#75715e">2. 调用 put 方法
+</span><span style="color:#75715e">2.1 第一次添加, 把 k-v 封装到 Entry 对象，放入 root
+</span><span style="color:#75715e">Entry&lt;K,V&gt; t = root;
+</span><span style="color:#75715e">if (t == null) {
+</span><span style="color:#75715e">	compare(key, key); // type (and possibly null) check
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">	root = new Entry&lt;&gt;(key, value, null);
+</span><span style="color:#75715e">	size = 1;
+</span><span style="color:#75715e">	modCount++;
+</span><span style="color:#75715e">	return null;
+</span><span style="color:#75715e">}
+</span><span style="color:#75715e">2.2 以后添加
+</span><span style="color:#75715e">Comparator&lt;? super K&gt; cpr = comparator;
+</span><span style="color:#75715e">if (cpr != null) {
+</span><span style="color:#75715e">	do { //遍历所有的 key , 给当前 key 找到适当位置
+</span><span style="color:#75715e">        parent = t;
+</span><span style="color:#75715e">        cmp = cpr.compare(key, t.key);//动态绑定到我们的匿名内部类的 compare
+</span><span style="color:#75715e">        if (cmp &lt; 0)
+</span><span style="color:#75715e">        t = t.left;
+</span><span style="color:#75715e">        else if (cmp &gt; 0)
+</span><span style="color:#75715e">        t = t.right;
+</span><span style="color:#75715e">        else //如果遍历过程中，发现准备添加 Key 和当前已有的 Key 相等，就不添加
+</span><span style="color:#75715e">        return t.setValue(value);
+</span><span style="color:#75715e">	} while (t != null);
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">}
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">*/</span>
+</code></pre></div><h3 id="collections-工具类">Collections 工具类</h3>
+<p><img src="G:%5Cmyblog%5Ccontent%5Cposts%5C15_java%E5%9F%BA%E7%A1%80.assets%5Cimage-20210802175257642.png" alt="image-20210802175257642"></p>
+<h4 id="排序操作均为static-方法">排序操作：（均为static 方法)</h4>
+<p><img src="G:%5Cmyblog%5Ccontent%5Cposts%5C15_java%E5%9F%BA%E7%A1%80.assets%5Cimage-20210802175312843.png" alt="image-20210802175312843"></p>
+<h4 id="查找替换">查找、替换</h4>
+<p><img src="G:%5Cmyblog%5Ccontent%5Cposts%5C15_java%E5%9F%BA%E7%A1%80.assets%5Cimage-20210802175337019.png" alt="image-20210802175337019"></p></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
+      
+        
+          <a class="ui label" href="/tags/java" title="java">java</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>保存为图片
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore>
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'https:\/\/xiaoxu1949.github.io\/posts\/15_java%E5%9F%BA%E7%A1%80\/';  
+            this.page.identifier = '\/posts\/15_java%E5%9F%BA%E7%A1%80\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'xiaoxu' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+    
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="/img/avatar.jpg">
+      
+    </div>
+
+    
+    <div class="ui medium header">
+    
+      xiaoxu 的博客
+      <div class="sub header" style="margin-top: 0.5rem;">知行合一</div>
+    
+    </div>
+    
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/posts">
+        <i class="archive icon" title="归档"></i>
+      </a>
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="所有标签"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="所有分类"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/tags/bug" title="bug">bug</a>
+    
+      <a class="ui label" href="/tags/git" title="git">git</a>
+    
+      <a class="ui label" href="/tags/hugo" title="hugo">hugo</a>
+    
+      <a class="ui label" href="/tags/java" title="java">java</a>
+    
+      <a class="ui label" href="/tags/linux" title="linux">linux</a>
+    
+      <a class="ui label" href="/tags/markdown" title="markdown">markdown</a>
+    
+      <a class="ui label" href="/tags/other" title="other">other</a>
+    
+      <a class="ui label" href="/tags/pytracking" title="pytracking">pytracking</a>
+    
+      <a class="ui label" href="/tags/tools" title="tools">tools</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+      
+      
+      
+      
+
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0" class="item">深度学习</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/labelme%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98/" class="item">Labelme使用问题</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/pytracking%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98/" class="item">Pytracking项目问题</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/%E7%94%9F%E6%B4%BB" class="item">生活</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/pin/" class="item">Pin</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E6%B0%94%E4%B8%8D%E4%B8%8A%E8%84%B8/" class="item">气不上脸</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E6%89%8B%E6%9C%BA%E4%B8%A2%E4%BA%86%E6%80%8E%E4%B9%88%E5%8A%9E/" class="item">手机丢了怎么办</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8Ddns%E9%97%AE%E9%A2%98/" class="item">博客域名DNS问题</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/idea%E6%8F%92%E4%BB%B6%E7%A0%B4%E8%A7%A3/" class="item">Idea插件破解</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7/" class="item">搜索技巧</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E5%9B%9B%E7%BA%A7%E5%85%A5%E5%85%9A%E5%92%8C%E5%90%8E%E6%82%94/" class="item">四级、入党和后悔</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E8%80%83%E5%9B%9B%E7%BA%A7%E4%B8%8E%E6%84%8F%E5%A4%96/" class="item">考四级与意外</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E4%B9%B0%E6%A1%8C%E5%AD%90/" class="item">实验室买桌子</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E5%9B%BE%E7%89%87%E7%9A%84%E6%89%B9%E9%87%8F%E5%91%BD%E5%90%8D%E6%96%B9%E6%B3%95/" class="item">图片的批量命名方法</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E7%81%AB%E7%8B%90%E8%B4%A6%E5%8F%B7%E4%B8%8D%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98/" class="item">火狐账号不同步问题</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E6%88%91%E7%9A%84%E5%AE%B6%E6%88%91%E7%9A%84%E6%A0%B9/" class="item">我的家我的根</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E5%90%90%E6%A7%BD/" class="item">吐槽</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/hugo%E6%96%B0%E5%A2%9E%E6%96%87%E6%A1%A3%E5%8F%8Agit%E6%8E%A8%E9%80%81%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="item">hugo新增文档及git推送服务器</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/win&#43;e%E5%BF%AB%E6%8D%B7%E5%A4%B1%E7%81%B5/" class="item">Win&#43;E快捷失灵</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/%E4%BA%AC%E4%B8%9C%E7%94%B5%E8%84%91%E4%BA%94%E5%B9%B4%E4%BF%9D%E4%BF%AE/" class="item">京东电脑五年保修</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            <a href="/categories/%E7%BC%96%E7%A8%8B" class="item">编程</a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/java_hsp08/" class="item">Java_hsp08</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/java_hsp07/" class="item">Java_hsp07</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/15_java%E5%9F%BA%E7%A1%80/" class="item">java基础15</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/16_java%E5%9F%BA%E7%A1%80/" class="item">java基础16</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/14_java%E5%9F%BA%E7%A1%80/" class="item">java基础14</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/13_java%E5%9F%BA%E7%A1%80/" class="item">java基础13</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/12_java%E5%9F%BA%E7%A1%80/" class="item">java基础12</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/java_hsp06/" class="item">Java_hsp06</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/java_hsp05/" class="item">Java_hsp05</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/java_hsp04/" class="item">Java_hsp04</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/java_hsp03/" class="item">Java_hsp03</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/java%E5%B8%B8%E8%A7%81%E5%8D%95%E8%AF%8D01/" class="item">Java常见单词01</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/11_java%E5%9F%BA%E7%A1%80/" class="item">java基础11</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/10_java%E5%9F%BA%E7%A1%80/" class="item">java基础10</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/09_java%E5%9F%BA%E7%A1%80/" class="item">java基础09</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/08_java%E5%9F%BA%E7%A1%80/" class="item">java基础08</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/07_java%E5%9F%BA%E7%A1%80/" class="item">java基础07</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/java_hsp02/" class="item">Java_hsp02</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/06_java%E5%9F%BA%E7%A1%80/" class="item">java基础06</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/idea%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="item">IDEA常用快捷键</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/05_java%E5%9F%BA%E7%A1%80/" class="item">java基础05</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/04_java%E5%9F%BA%E7%A1%80/" class="item">java基础04</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/java_hsp01/" class="item">Java_hsp01</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/myjavacode02/" class="item">MyJavaCode02</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/myjavacode01/" class="item">MyJavaCode01</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/03_java%E5%9F%BA%E7%A1%80/" class="item">java基础03</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/sublime_text3%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/" class="item">Sublime_Text3快捷键大全</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/pycham%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="item">Pycham快捷键</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/02_java%E7%AC%94%E8%AE%B0/" class="item">java基础02</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/01_java%E7%AC%94%E8%AE%B0/" class="item">java基础01</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/nvidia%E9%A9%B1%E5%8A%A8%E9%97%AE%E9%A2%98/" class="item">Nvidia驱动问题</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/linux%E9%80%9F%E6%9F%A5-%E7%A8%8B%E5%BA%8F%E7%BE%8A/" class="item">Linux速查-程序羊</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a href="/posts/markdown/" class="item">Markdown常用语法</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+
+      
+    </div>
+  </section>
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+  
+    <div class="item">
+      <a href="mailto:18811155642@163.com">
+        <i class=" mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/XiaoXu1949" target="_blank">
+        <i class=" github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 1949 - 2021 </p>
+    
+
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+
+    
+      <p>常含敬畏之心</p>
+    
+  </section>
+</article>
+
+  </div>
+</div>
+
+          </div>
+        </section>
+        <section class="back">
+          <div class="dream-max-width">
+            <div class="ui centered relaxed grid dream-grid dream-back">
+  
+  
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">学习里的听和做</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>知行合一具体到学习中，最近有体会。听先闻道者讲，花一分气力时间；自己来动手实践，至少应该花两分气力。通俗点就是上课花一个小时听讲，课下最少应该花两个小时来记忆、琢磨、回顾等。否则，这个信息传递过程中，损失的细节以及自己的感悟丢失太多，会导致一知半解，这比没有灌输知识更加糟糕。再有兴趣是最好的老师，兴趣又和每个人的天性以及成长经历有关。</p>
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">别贪不属于自己的东西</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>20216.20</p>
+<p>刚一个不认识的实验室学姐回实验室收拾东西，忽然尴尬的发现自己贪了她的书。事情是这样的，研三的一个学姐读博去了，留下一个位置，以为没人坐了，桌上有几本书，三本linux的书，还有三本行草。本着肥水不流外人田，便没有经过物主人的同意，擅自拿走了。</p>
+<p>今天物主人回来了，还在找这些书，虽然她不知道在我这里，但自己觉得惭愧，恨不得找个地缝钻进去，就是贪小便宜。事情没有败露，却给自己提个醒，见微知著。不是自己的东西不要妄想占有，不要贪小便宜，只拿属于自己的东西就好，也不要贪得无厌，多了不一定好。</p>
+<p>回头看，拿了哪些书，又有什么用呢！都没怎么看过，不看何必要占有哪些书呢？竟然占有了，就要物尽其用。现代人就是过度消费，消费这些物质，消费感情。再豪华的房子，住着不安心；再奢侈的轿车，开着不踏实；房间里堆再多的书，不看；手里拿着再多的钱，没有真感情；这又有什么用呢！看似富足，实则贫乏。</p>
+<p>做到光明磊落，心如止水，坦坦荡荡。这些更多的是心，你的心也即映射了这个世界。要做到我心光明，我心光明了，任何事情都不要害怕，上天会帮助你的！</p>
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">2021.5.21向他汇报</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>这次汇报时，心情极度不好。</p>
+<p>这次汇报，自己没有什么成果、进展，又为小论文的事情着急。老师又一个劲的催着做一些自己很难做出来得东西，因此导致心情极度沮丧，晚上给老妈通了电话，心情才有所平复。</p>
+<blockquote>
+<p>当时写的日记：</p>
+<p>今天又和他汇报，没啥用，感觉他也是在完成任务。为什么呢？就是没有实质性的帮助，再加上他说的话，给的命令，完全就没啥帮助。我希望有张科备那种实打实的帮助，或者郭淼那种精神上的帮助都可以。然而，我再怎么严格要求自己，他都无感。或许他自身难保，自己的事情都处理不了呢！不管了！按照自己的进度来就好了。</p>
+<p>按照自己的进度来，事情要做，但是要按照我自己的节奏来，不管你说什么，除非有实质性的帮助，不然都按照我自己的方式来做。目标不会变了，就是这个追踪器加分割目标。数据集有了，最大的麻烦是啃下代码，代码怎么实现的，以及实现的原理。然后才是怎么修改，实验。实验是一小部分。按照实际情况，应该是先写，把该写的东西写好，在写的基础上，做实验，就是把写的东西弄好看，再给一点依据。</p>
+<p>做吧，按照自己的方法，按照自己的节奏来！</p>
+</blockquote>
+<p>总结：首先自己要努力，内源动力最总要。其次，对于别人的要求 量力而行，要结合自己的实际来做事，有自己的节奏最重要。最后，不管怎么样，都是要自己对自己负责滴，父母再厉害也只能帮你某些方面；父母再不厉害，也能在某些方面帮助你。言而总之，尽人事，知天命。每个人的能力都是有限的，尽力去做了，享受了过程，对于结果，不可控，秉承着顺其自然，船到桥头自然直就好。</p>
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">处女秀</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>一篇简短自我介绍</p>
+<p>初次搭建博客，使用的是hugo搭建的。整个流程中有哪些东西呢？Git、Hugo、powershell操作指令，当然还有远端部署。</p>
+<p>遇到的问题有：</p>
+<p>1.blog根目录下的几个文件夹是什么？是由hugo生成的。</p>
+<p>2.git、hugo这些我安装的东西都算啥？是平常用的运行程序，还是啥?。应该都是运行程序吧，因为都用的是.exe程序安装的，并且都配置了环境变量。只不过它们都没有图形界面，但是都可以在机器上使用它们的命令。这里的机器就是指人机交互窗口(命令提示符/cmd/power shell),这些终端是介于底层硬件和操作系统之间的。</p>
+<p>3.再就是主题，主题的那些文件夹是啥？如何看主题源码，更改配置，再进阶一点就是自己来做优化。</p>
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">About me</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>hi , my name is xuzhuang , this is myblog</p>
+<p>nice to meet you , happy with your watching .</p>
+        </div>
+      </article>
+    </section>
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">社交链接</h3>
+      </div>
+      <div class="ui bottom attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+  
+    <div class="item">
+      <a href="mailto:18811155642@163.com">
+        <i class="large mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/XiaoXu1949" target="_blank">
+        <i class="large github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+  window.backgroundDark =  null 
+  window.backgroundImageDark =  null 
+  window.darkNav =  true 
+  window.hasTwitterEmbed =  true 
+
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/jquery.overlayScrollbars.min.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+
+    
+<script src="/js/html2canvas.min.js"></script>
+<script src="/js/post.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
+     
+  
+
+  <script>
+  hljs.initHighlightingOnLoad()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    var lightTheme = "gruvbox-light"
+    var darkTheme = "gruvbox-dark"
+    var theme = isDark ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark ? '#333' : '')
+  }
+</script>
+
+
+
+
+
+    
+      <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="搜索" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/xiaoxu1949.github.io/index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="/js/search.js"></script>
+
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-98295641-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+  </body>
+</html>
