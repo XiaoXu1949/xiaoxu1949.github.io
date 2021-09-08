@@ -6,7 +6,97 @@
     <description>Recent content in 编程 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Tue, 10 Aug 2021 08:52:39 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Sep 2021 22:44:07 +0800</lastBuildDate><atom:link href="https://xiaoxu1949.github.io/categories/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Properties配置文件</title>
+      <link>https://xiaoxu1949.github.io/posts/properties%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Wed, 08 Sep 2021 22:44:07 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/properties%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</guid>
+      <description>&lt;p&gt;Properties配置文件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java技术路线</title>
+      <link>https://xiaoxu1949.github.io/posts/java%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF/</link>
+      <pubDate>Wed, 08 Sep 2021 22:41:20 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/java%E6%8A%80%E6%9C%AF%E8%B7%AF%E7%BA%BF/</guid>
+      <description>&lt;p&gt;javaWeb、主流框架&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java_hsp13</title>
+      <link>https://xiaoxu1949.github.io/posts/java_hsp13/</link>
+      <pubDate>Wed, 08 Sep 2021 22:13:52 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/java_hsp13/</guid>
+      <description>&lt;p&gt;反射、class类、类加载&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java_hsp12</title>
+      <link>https://xiaoxu1949.github.io/posts/java_hsp12/</link>
+      <pubDate>Wed, 08 Sep 2021 22:13:46 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/java_hsp12/</guid>
+      <description>&lt;p&gt;网络编程、ip、TCP、UDP、Socket、netstat、&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java_hsp11</title>
+      <link>https://xiaoxu1949.github.io/posts/java_hsp11/</link>
+      <pubDate>Wed, 08 Sep 2021 22:13:39 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/java_hsp11/</guid>
+      <description>&lt;p&gt;IO流、File、FileInputStream 、 FileOutputStream、FileReader 、 FileWriter、包装流、装换流、对象流、打印流、Properties&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java_hsp10</title>
+      <link>https://xiaoxu1949.github.io/posts/java_hsp10/</link>
+      <pubDate>Wed, 08 Sep 2021 22:13:33 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/java_hsp10/</guid>
+      <description>&lt;p&gt;多线程基础、Thread、Runnable、线程的生命周期、锁&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java_hsp09</title>
+      <link>https://xiaoxu1949.github.io/posts/java_hsp09/</link>
+      <pubDate>Wed, 08 Sep 2021 22:13:19 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/java_hsp09/</guid>
+      <description>&lt;p&gt;坦克大战：java 绘图坐标体系、java 事件处理机制&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>java基础19</title>
+      <link>https://xiaoxu1949.github.io/posts/19_java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 08 Sep 2021 22:12:41 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/19_java%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;输入输出流    未完！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>java基础18</title>
+      <link>https://xiaoxu1949.github.io/posts/18_java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 08 Sep 2021 22:12:32 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/18_java%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;继承Thread、实现Runnable、线程终止、join()线程插队、守护线程、线程生命周期、Synchronized、互斥锁、死锁、释放锁&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>java基础17</title>
+      <link>https://xiaoxu1949.github.io/posts/17_java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Wed, 08 Sep 2021 22:12:24 +0800</pubDate>
+      
+      <guid>https://xiaoxu1949.github.io/posts/17_java%E5%9F%BA%E7%A1%80/</guid>
+      <description>&lt;p&gt;坦克大战、像素、Graphics 为什么抽象方法可以直接用、java事件处理机制&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Java_hsp08</title>
       <link>https://xiaoxu1949.github.io/posts/java_hsp08/</link>
